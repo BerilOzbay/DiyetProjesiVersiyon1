@@ -32,71 +32,78 @@
             label2 = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
+            btnGiris = new Button();
+            btnKayitOl = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(36, 52);
+            label1.Location = new Point(41, 69);
             label1.Name = "label1";
-            label1.Size = new Size(30, 15);
+            label1.Size = new Size(38, 20);
             label1.TabIndex = 0;
             label1.Text = "Mail";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(36, 86);
+            label2.Location = new Point(41, 115);
             label2.Name = "label2";
-            label2.Size = new Size(30, 15);
+            label2.Size = new Size(39, 20);
             label2.TabIndex = 1;
             label2.Text = "Şifre";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(100, 49);
+            textBox1.Location = new Point(114, 65);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
+            textBox1.Size = new Size(114, 27);
             textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(100, 83);
+            textBox2.Location = new Point(114, 111);
+            textBox2.Margin = new Padding(3, 4, 3, 4);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
+            textBox2.Size = new Size(114, 27);
             textBox2.TabIndex = 3;
             // 
-            // button1
+            // btnGiris
             // 
-            button1.Location = new Point(100, 124);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 4;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnGiris.Location = new Point(114, 165);
+            btnGiris.Margin = new Padding(3, 4, 3, 4);
+            btnGiris.Name = "btnGiris";
+            btnGiris.Size = new Size(86, 31);
+            btnGiris.TabIndex = 4;
+            btnGiris.Text = "GİRİŞ";
+            btnGiris.UseVisualStyleBackColor = true;
+            btnGiris.Click += btnGiris_Click;
             // 
-            // button2
+            // btnKayitOl
             // 
-            button2.Location = new Point(100, 153);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 5;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btnKayitOl.Location = new Point(114, 204);
+            btnKayitOl.Margin = new Padding(3, 4, 3, 4);
+            btnKayitOl.Name = "btnKayitOl";
+            btnKayitOl.Size = new Size(86, 31);
+            btnKayitOl.TabIndex = 5;
+            btnKayitOl.Text = "KAYIT OL";
+            btnKayitOl.UseVisualStyleBackColor = true;
+            btnKayitOl.Click += btnKayitOl_Click;
             // 
             // GirisEkrani
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(259, 225);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            ClientSize = new Size(296, 300);
+            Controls.Add(btnKayitOl);
+            Controls.Add(btnGiris);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "GirisEkrani";
             Text = "Form1";
             ResumeLayout(false);
@@ -109,7 +116,7 @@
         private Label label2;
         private TextBox textBox1;
         private TextBox textBox2;
-        private Button button1;
-        private Button button2;
+        private Button btnGiris;
+        private Button btnKayitOl;
     }
 }

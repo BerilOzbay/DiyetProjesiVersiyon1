@@ -16,5 +16,47 @@ namespace _03DiyetProjesi.PL
         {
             InitializeComponent();
         }
+        private void FormAc(Form gosterilecekForm)
+        {
+
+            gosterilecekForm.StartPosition = 0;
+
+            if (!MdiChildren.Contains(gosterilecekForm))
+                gosterilecekForm.MdiParent = this;
+
+            foreach (var form in MdiChildren)
+            {
+                if (form.Text == gosterilecekForm.Text)
+                    form.Show();
+                else
+                    form.Close();
+            }
+        }
+
+        private void öğünEkranıToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAc(new ÖğünEkranı());
+        }
+
+        private void yiyecekEkranıToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAc(new YiyecekEkranı());
+        }
+
+        private void porsiyonEkranıToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAc(new PorsiyonEkranı());
+
+        }
+
+        private void kıyaslamaEkranıToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAc(new KıyaslaRaporuEkranı());
+        }
+
+        private void enÇokYenenYemekEkranıToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAc(new EnCokYenenYemekEkrani());
+        }
     }
 }

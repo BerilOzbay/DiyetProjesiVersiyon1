@@ -33,13 +33,15 @@
             yiyecekEkranıToolStripMenuItem = new ToolStripMenuItem();
             porsiyonEkranıToolStripMenuItem = new ToolStripMenuItem();
             kıyaslamaEkranıToolStripMenuItem = new ToolStripMenuItem();
+            enÇokYenenYemekEkranıToolStripMenuItem = new ToolStripMenuItem();
+            tümKullanıcılarEkranıToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { öğünEkranıToolStripMenuItem, yiyecekEkranıToolStripMenuItem, porsiyonEkranıToolStripMenuItem, kıyaslamaEkranıToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { öğünEkranıToolStripMenuItem, yiyecekEkranıToolStripMenuItem, porsiyonEkranıToolStripMenuItem, kıyaslamaEkranıToolStripMenuItem, enÇokYenenYemekEkranıToolStripMenuItem, tümKullanıcılarEkranıToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1213, 28);
@@ -51,24 +53,41 @@
             öğünEkranıToolStripMenuItem.Name = "öğünEkranıToolStripMenuItem";
             öğünEkranıToolStripMenuItem.Size = new Size(103, 24);
             öğünEkranıToolStripMenuItem.Text = "Öğün Ekranı";
+            öğünEkranıToolStripMenuItem.Click += öğünEkranıToolStripMenuItem_Click;
             // 
             // yiyecekEkranıToolStripMenuItem
             // 
             yiyecekEkranıToolStripMenuItem.Name = "yiyecekEkranıToolStripMenuItem";
             yiyecekEkranıToolStripMenuItem.Size = new Size(116, 24);
             yiyecekEkranıToolStripMenuItem.Text = "Yiyecek Ekranı";
+            yiyecekEkranıToolStripMenuItem.Click += yiyecekEkranıToolStripMenuItem_Click;
             // 
             // porsiyonEkranıToolStripMenuItem
             // 
             porsiyonEkranıToolStripMenuItem.Name = "porsiyonEkranıToolStripMenuItem";
             porsiyonEkranıToolStripMenuItem.Size = new Size(122, 24);
             porsiyonEkranıToolStripMenuItem.Text = "Porsiyon Ekranı";
+            porsiyonEkranıToolStripMenuItem.Click += porsiyonEkranıToolStripMenuItem_Click;
             // 
             // kıyaslamaEkranıToolStripMenuItem
             // 
             kıyaslamaEkranıToolStripMenuItem.Name = "kıyaslamaEkranıToolStripMenuItem";
             kıyaslamaEkranıToolStripMenuItem.Size = new Size(134, 24);
             kıyaslamaEkranıToolStripMenuItem.Text = "Kıyaslama Ekranı";
+            kıyaslamaEkranıToolStripMenuItem.Click += kıyaslamaEkranıToolStripMenuItem_Click;
+            // 
+            // enÇokYenenYemekEkranıToolStripMenuItem
+            // 
+            enÇokYenenYemekEkranıToolStripMenuItem.Name = "enÇokYenenYemekEkranıToolStripMenuItem";
+            enÇokYenenYemekEkranıToolStripMenuItem.Size = new Size(202, 24);
+            enÇokYenenYemekEkranıToolStripMenuItem.Text = "En Çok Yenen Yemek Ekranı";
+            enÇokYenenYemekEkranıToolStripMenuItem.Click += enÇokYenenYemekEkranıToolStripMenuItem_Click;
+            // 
+            // tümKullanıcılarEkranıToolStripMenuItem
+            // 
+            tümKullanıcılarEkranıToolStripMenuItem.Name = "tümKullanıcılarEkranıToolStripMenuItem";
+            tümKullanıcılarEkranıToolStripMenuItem.Size = new Size(173, 24);
+            tümKullanıcılarEkranıToolStripMenuItem.Text = "Tüm Kullanıcılar Ekranı";
             // 
             // AdminEkran
             // 
@@ -92,5 +111,7 @@
         private ToolStripMenuItem yiyecekEkranıToolStripMenuItem;
         private ToolStripMenuItem porsiyonEkranıToolStripMenuItem;
         private ToolStripMenuItem kıyaslamaEkranıToolStripMenuItem;
+        private ToolStripMenuItem enÇokYenenYemekEkranıToolStripMenuItem;
+        private ToolStripMenuItem tümKullanıcılarEkranıToolStripMenuItem;
     }
 }
