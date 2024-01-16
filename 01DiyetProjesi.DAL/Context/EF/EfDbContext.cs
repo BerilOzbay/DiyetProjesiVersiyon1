@@ -14,6 +14,7 @@ namespace _01DiyetProjesi.DAL.Context.EF
         public DbSet<Ogun> Ogunler { get; set; }
         public DbSet<Porsiyon> Porsiyonlar { get; set; }
         public DbSet<Yiyecek> Yiyecekler { get; set; }
+        public DbSet<DiyetTablosu> DiyetTablolari { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-LAQPBG1\MSSQLSERVER02;Database=DiyetProjesi;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");

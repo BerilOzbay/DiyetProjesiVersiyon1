@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace _02DiyetProjesi.BL.Manager.Abstract
 {
-    public interface IGenericManager<T>
+    public interface IGenericManager<TModel,TEntity>
     {
-        void Add(T model);
-        void Update(T model);
-        void Delete(T model);
-        void Remove(T model);
-        T GetById(int id);
-        List<T> GetAll();
-        List<T> Search(Expression<Func<T, bool>> predicate);
+        void Add(TModel model);
+        void Update(TModel model);
+        void Delete(TModel model);
+        void Remove(TModel model);
+        TModel GetById(int id);
+        ICollection<TModel> GetAll();
+        ICollection<TModel> Search(Expression<Func<TEntity, bool>> predicate);
     }
 }

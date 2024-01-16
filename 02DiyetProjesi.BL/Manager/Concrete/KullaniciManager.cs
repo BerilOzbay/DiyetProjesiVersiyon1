@@ -3,6 +3,7 @@ using _01DiyetProjesi.DAL.Entities.Concrete;
 using _01DiyetProjesi.DAL.Repository.Concrete;
 using _02DiyetProjesi.BL.Manager.Abstract;
 using _02DiyetProjesi.BL.Model;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;

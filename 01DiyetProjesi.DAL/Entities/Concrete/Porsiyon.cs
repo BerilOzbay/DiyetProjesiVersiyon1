@@ -11,5 +11,6 @@ namespace _01DiyetProjesi.DAL.Entities.Concrete
     {
         //Yemek kaşığı, tabak, bardak gibi düşünülmüştür.
         public string Tur { get; set; }
+        public ICollection<DiyetTablosu> DiyetTablolari { get; set; }
     }
 }

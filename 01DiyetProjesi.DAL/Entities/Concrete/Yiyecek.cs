@@ -13,5 +13,6 @@ namespace _01DiyetProjesi.DAL.Entities.Concrete
         public float Kalori { get; set; }
         //Yiyeceklerin gorseli tutulacak.
         public byte[] Resim { get; set; }
+        public ICollection<DiyetTablosu> DiyetTablolari { get; set; }
     }
 }

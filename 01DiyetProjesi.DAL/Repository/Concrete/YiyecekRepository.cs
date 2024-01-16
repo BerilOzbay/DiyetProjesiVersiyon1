@@ -13,6 +13,9 @@ namespace _01DiyetProjesi.DAL.Repository.Concrete
 {
     public class YiyecekRepository : GenericRepository<Yiyecek>
     {
+        private DbContext _dbContext;
+        public YiyecekRepository()
+        {}
         #region MyRegion
         //private EfDbContext _efDbContext;
         //public YiyecekRepository()
@@ -49,7 +52,7 @@ namespace _01DiyetProjesi.DAL.Repository.Concrete
         #endregion
         public YiyecekRepository(DbContext dbContext) : base(dbContext)
         {
-
+            _dbContext = dbContext;
         }
     }
 }

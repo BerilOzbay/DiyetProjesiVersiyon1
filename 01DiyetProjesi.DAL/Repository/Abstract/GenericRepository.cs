@@ -14,6 +14,8 @@ namespace _01DiyetProjesi.DAL.Repository.Abstract
     {
         private DbContext _dbContext;
         private DbSet<T> _dbSet;
+        public GenericRepository()
+        {}
 
         public GenericRepository(DbContext dbContext)
         {
@@ -48,7 +50,7 @@ namespace _01DiyetProjesi.DAL.Repository.Abstract
             this.Update(entity);
         }
 
-        public List<T> GetAll()
+        public ICollection<T> GetAll()
         {
            return _dbSet.AsNoTracking().ToList();
         }
@@ -58,7 +60,7 @@ namespace _01DiyetProjesi.DAL.Repository.Abstract
             return _dbSet.AsNoTracking().Single(t => t.Id == id);
         }
 
-        public List<T> Search(Expression<Func<T, bool>> predicate)
+        public ICollection<T> Search(Expression<Func<T, bool>> predicate)
         {
             return _dbSet.Where(predicate).ToList();
         }

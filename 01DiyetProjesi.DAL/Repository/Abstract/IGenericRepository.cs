@@ -14,8 +14,8 @@ namespace _01DiyetProjesi.DAL.Repository.Abstract
         void Update(T entity);
         void Delete(T entity);
         void Remove(T entity);
-        List<T> GetAll();
+        ICollection<T> GetAll();
         T GetById(int id);
-        List<T> Search(Expression<Func<T, bool>> predicate);
+        ICollection<T> Search(Expression<Func<T, bool>> predicate);
     }
 }

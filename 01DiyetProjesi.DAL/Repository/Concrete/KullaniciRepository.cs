@@ -13,6 +13,9 @@ namespace _01DiyetProjesi.DAL.Repository.Concrete
 {
     public class KullaniciRepository : GenericRepository<Kullanici>
     {
+        private DbContext _dbContext;
+        public KullaniciRepository()
+        {}
         #region MyRegion
         //private EfDbContext _efDbContext;
         //public KullaniciRepository()
@@ -49,7 +52,7 @@ namespace _01DiyetProjesi.DAL.Repository.Concrete
         #endregion
         public KullaniciRepository(DbContext dbContext) : base(dbContext) 
         {
-
+            _dbContext = dbContext;
         }   
 
     }
