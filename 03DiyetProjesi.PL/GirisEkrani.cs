@@ -1,8 +1,8 @@
 namespace _03DiyetProjesi.PL
 {
-    public partial class Form1 : Form
+    public partial class GirisEkrani : Form
     {
-        public Form1()
+        public GirisEkrani()
         {
             InitializeComponent();
         }
