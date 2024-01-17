@@ -40,8 +40,8 @@
             txtMail = new TextBox();
             txtSifre = new TextBox();
             label7 = new Label();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
+            rBtnErkek = new RadioButton();
+            rBtnKadin = new RadioButton();
             btnKayitOl = new Button();
             groupBox1 = new GroupBox();
             groupBox1.SuspendLayout();
@@ -143,27 +143,27 @@
             label7.TabIndex = 12;
             label7.Text = "Şifre";
             // 
-            // radioButton1
+            // rBtnErkek
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(82, 22);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(58, 19);
-            radioButton1.TabIndex = 13;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "ERKEK";
-            radioButton1.UseVisualStyleBackColor = true;
+            rBtnErkek.AutoSize = true;
+            rBtnErkek.Location = new Point(82, 22);
+            rBtnErkek.Name = "rBtnErkek";
+            rBtnErkek.Size = new Size(58, 19);
+            rBtnErkek.TabIndex = 13;
+            rBtnErkek.Text = "ERKEK";
+            rBtnErkek.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rBtnKadin
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(16, 22);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(60, 19);
-            radioButton2.TabIndex = 14;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "KADIN";
-            radioButton2.UseVisualStyleBackColor = true;
+            rBtnKadin.AutoSize = true;
+            rBtnKadin.Checked = true;
+            rBtnKadin.Location = new Point(16, 22);
+            rBtnKadin.Name = "rBtnKadin";
+            rBtnKadin.Size = new Size(60, 19);
+            rBtnKadin.TabIndex = 14;
+            rBtnKadin.TabStop = true;
+            rBtnKadin.Text = "KADIN";
+            rBtnKadin.UseVisualStyleBackColor = true;
             // 
             // btnKayitOl
             // 
@@ -173,11 +173,12 @@
             btnKayitOl.TabIndex = 15;
             btnKayitOl.Text = "Kayit Ol";
             btnKayitOl.UseVisualStyleBackColor = true;
+            btnKayitOl.Click += btnKayitOl_Click;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(radioButton2);
-            groupBox1.Controls.Add(radioButton1);
+            groupBox1.Controls.Add(rBtnKadin);
+            groupBox1.Controls.Add(rBtnErkek);
             groupBox1.Location = new Point(27, 139);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(174, 54);
@@ -226,8 +227,8 @@
         private TextBox txtMail;
         private TextBox txtSifre;
         private Label label7;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
+        private RadioButton rBtnErkek;
+        private RadioButton rBtnKadin;
         private Button btnKayitOl;
         private GroupBox groupBox1;
     }

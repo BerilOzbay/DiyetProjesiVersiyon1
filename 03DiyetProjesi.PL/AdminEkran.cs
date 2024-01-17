@@ -35,7 +35,7 @@ namespace _03DiyetProjesi.PL
 
         private void öğünEkranıToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormAc(new ÖğünEkranı());
+            FormAc(new OgunEkrani());
         }
 
         private void yiyecekEkranıToolStripMenuItem_Click(object sender, EventArgs e)
