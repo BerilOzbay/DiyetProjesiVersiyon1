@@ -62,6 +62,8 @@ namespace _02DiyetProjesi.BL.Manager.Abstract
         public ICollection<TModel> GetAll()
         {
             ICollection<TEntity> entities = _repo.GetAll();
+            //EKLENEN SATIR//
+            entities = entities.Where(e => e.Deleted == null).ToList();
 
             ICollection<TModel> models = new List<TModel>();
 

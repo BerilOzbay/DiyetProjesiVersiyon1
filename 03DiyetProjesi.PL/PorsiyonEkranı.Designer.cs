@@ -45,6 +45,7 @@
             btnPorsiyonGuncelle.TabIndex = 15;
             btnPorsiyonGuncelle.Text = "GÜNCELLE";
             btnPorsiyonGuncelle.UseVisualStyleBackColor = true;
+            btnPorsiyonGuncelle.Click += btnPorsiyonGuncelle_Click;
             // 
             // btnPorsiyonSil
             // 
