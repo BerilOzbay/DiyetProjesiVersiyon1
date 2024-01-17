@@ -24,6 +24,25 @@ namespace _03DiyetProjesi.PL
             secilenPorsiyon = (PorsiyonViewModel)dgvPorsiyonEkrani.SelectedRows[0].DataBoundItem;
             txtporsiyonTuru.Text = secilenPorsiyon.Tur;
         }
+        private void Goster()
+        {
+            dgvPorsiyonEkrani.DataSource = null;
+            dgvPorsiyonEkrani.DataSource = PorsiyonlariGetir();
+        }
+
+        private List<PorsiyonViewModel> PorsiyonlariGetir()
+        {
+            PorsiyonManager porsiyonManager = new PorsiyonManager();
+            try
+            {
+                List<PorsiyonViewModel> porsiyonlar = porsiyonManager.GetAll().ToList();
+                return porsiyonlar;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
 
         private void btnPorsiyonEkle_Click(object sender, EventArgs e)
         {
@@ -35,6 +54,7 @@ namespace _03DiyetProjesi.PL
                     PorsiyonManager porsiyonManager = new PorsiyonManager();
                     porsiyonViewModel.Tur = txtporsiyonTuru.Text;
                     porsiyonManager.Add(porsiyonViewModel);
+                    Goster();
                     MessageBox.Show("Porsiyon eklendi");
                 }
                 else
@@ -57,6 +77,7 @@ namespace _03DiyetProjesi.PL
                     PorsiyonManager porsiyonManager = new PorsiyonManager();
                     porsiyonManager.Delete(secilenPorsiyon);
                     secilenPorsiyon = null;
+                    Goster();
                     MessageBox.Show("Başarı ile silinmiştir");
                 }
 
@@ -73,6 +94,31 @@ namespace _03DiyetProjesi.PL
 
         }
 
-      
+        private void btnPorsiyonGuncelle_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (secilenPorsiyon != null)
+                {
+                    PorsiyonManager porsiyonManager = new PorsiyonManager();
+                    
+                    secilenPorsiyon.Tur = txtporsiyonTuru.Text;
+                    porsiyonManager.Update(secilenPorsiyon);
+                    Goster();
+                    secilenPorsiyon = null;
+                    MessageBox.Show("Başarı ile güncellendi.");
+                }
+
+                else
+                {
+                    MessageBox.Show("Lutfen porsiyon seçiniz");
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata olustu" + ex.Message);
+            }
+        }
     }
 }

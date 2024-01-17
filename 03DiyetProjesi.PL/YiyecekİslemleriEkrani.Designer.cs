@@ -35,14 +35,15 @@
             cbxYiyecekSec = new ComboBox();
             cbxOgunSec = new ComboBox();
             cbxPorsiyonSec = new ComboBox();
-            cbxMiktarSec = new ComboBox();
             dgvYiyecekİslemleri = new DataGridView();
             btnEkle = new Button();
             btnGuncelle = new Button();
             btnSil = new Button();
             pictureBox1 = new PictureBox();
+            nUd = new NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)dgvYiyecekİslemleri).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nUd).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -105,14 +106,6 @@
             cbxPorsiyonSec.Size = new Size(121, 23);
             cbxPorsiyonSec.TabIndex = 6;
             // 
-            // cbxMiktarSec
-            // 
-            cbxMiktarSec.FormattingEnabled = true;
-            cbxMiktarSec.Location = new Point(539, 51);
-            cbxMiktarSec.Name = "cbxMiktarSec";
-            cbxMiktarSec.Size = new Size(121, 23);
-            cbxMiktarSec.TabIndex = 7;
-            // 
             // dgvYiyecekİslemleri
             // 
             dgvYiyecekİslemleri.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -120,6 +113,7 @@
             dgvYiyecekİslemleri.Name = "dgvYiyecekİslemleri";
             dgvYiyecekİslemleri.Size = new Size(480, 166);
             dgvYiyecekİslemleri.TabIndex = 8;
+            dgvYiyecekİslemleri.CellClick += dgvYiyecekİslemleri_CellClick;
             // 
             // btnEkle
             // 
@@ -129,6 +123,7 @@
             btnEkle.TabIndex = 9;
             btnEkle.Text = "EKLE";
             btnEkle.UseVisualStyleBackColor = true;
+            btnEkle.Click += btnEkle_Click;
             // 
             // btnGuncelle
             // 
@@ -156,17 +151,24 @@
             pictureBox1.TabIndex = 12;
             pictureBox1.TabStop = false;
             // 
+            // nUd
+            // 
+            nUd.Location = new Point(539, 51);
+            nUd.Name = "nUd";
+            nUd.Size = new Size(120, 23);
+            nUd.TabIndex = 13;
+            // 
             // YiyecekİslemleriEkrani
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(713, 404);
+            Controls.Add(nUd);
             Controls.Add(pictureBox1);
             Controls.Add(btnSil);
             Controls.Add(btnGuncelle);
             Controls.Add(btnEkle);
             Controls.Add(dgvYiyecekİslemleri);
-            Controls.Add(cbxMiktarSec);
             Controls.Add(cbxPorsiyonSec);
             Controls.Add(cbxOgunSec);
             Controls.Add(cbxYiyecekSec);
@@ -178,6 +180,7 @@
             Text = "YiyecekİslemleriEkrani";
             ((System.ComponentModel.ISupportInitialize)dgvYiyecekİslemleri).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nUd).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -191,11 +194,11 @@
         private ComboBox cbxYiyecekSec;
         private ComboBox cbxOgunSec;
         private ComboBox cbxPorsiyonSec;
-        private ComboBox cbxMiktarSec;
         private DataGridView dgvYiyecekİslemleri;
         private Button btnEkle;
         private Button btnGuncelle;
         private Button btnSil;
         private PictureBox pictureBox1;
+        private NumericUpDown nUd;
     }
 }
