@@ -8,6 +8,7 @@ namespace _02DiyetProjesi.BL.Model
 {
     public class YiyecekViewModel
     {
+        public int Id { get; set; }
         public string Ad { get; set; }
         public float Kalori { get; set; }
         //Yiyeceklerin gorseli tutulacak.
