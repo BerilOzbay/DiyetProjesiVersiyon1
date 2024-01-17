@@ -19,5 +19,6 @@ namespace _01DiyetProjesi.DAL.Entities.Concrete
         public int PorsiyonId { get; set; }
         public Porsiyon Porsiyon { get; set; }
         public int Birim { get; set; }
+        public DateTime YenilenGun { get; set; }
     }
 }

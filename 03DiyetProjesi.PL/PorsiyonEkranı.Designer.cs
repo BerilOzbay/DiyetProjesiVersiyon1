@@ -39,7 +39,7 @@
             // 
             // btnPorsiyonGuncelle
             // 
-            btnPorsiyonGuncelle.Location = new Point(374, 388);
+            btnPorsiyonGuncelle.Location = new Point(474, 373);
             btnPorsiyonGuncelle.Name = "btnPorsiyonGuncelle";
             btnPorsiyonGuncelle.Size = new Size(130, 38);
             btnPorsiyonGuncelle.TabIndex = 15;
@@ -48,52 +48,55 @@
             // 
             // btnPorsiyonSil
             // 
-            btnPorsiyonSil.Location = new Point(215, 388);
+            btnPorsiyonSil.Location = new Point(289, 373);
             btnPorsiyonSil.Name = "btnPorsiyonSil";
             btnPorsiyonSil.Size = new Size(130, 38);
             btnPorsiyonSil.TabIndex = 14;
             btnPorsiyonSil.Text = "SİL";
             btnPorsiyonSil.UseVisualStyleBackColor = true;
+            btnPorsiyonSil.Click += btnPorsiyonSil_Click;
             // 
             // btnPorsiyonEkle
             // 
-            btnPorsiyonEkle.Location = new Point(63, 388);
+            btnPorsiyonEkle.Location = new Point(116, 373);
             btnPorsiyonEkle.Name = "btnPorsiyonEkle";
             btnPorsiyonEkle.Size = new Size(130, 38);
             btnPorsiyonEkle.TabIndex = 13;
             btnPorsiyonEkle.Text = "EKLE";
             btnPorsiyonEkle.UseVisualStyleBackColor = true;
+            btnPorsiyonEkle.Click += btnPorsiyonEkle_Click;
             // 
             // dgvPorsiyonEkrani
             // 
             dgvPorsiyonEkrani.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPorsiyonEkrani.Location = new Point(63, 149);
+            dgvPorsiyonEkrani.Location = new Point(116, 115);
             dgvPorsiyonEkrani.Name = "dgvPorsiyonEkrani";
             dgvPorsiyonEkrani.RowHeadersWidth = 51;
             dgvPorsiyonEkrani.Size = new Size(488, 222);
             dgvPorsiyonEkrani.TabIndex = 12;
+            dgvPorsiyonEkrani.CellClick += dgvPorsiyonEkrani_CellClick;
             // 
             // lblTuru
             // 
             lblTuru.AutoSize = true;
             lblTuru.Location = new Point(116, 69);
             lblTuru.Name = "lblTuru";
-            lblTuru.Size = new Size(97, 20);
+            lblTuru.Size = new Size(100, 20);
             lblTuru.TabIndex = 17;
-            lblTuru.Text = "Porsiyon Türü";
+            lblTuru.Text = "Porsiyon Türü:";
             // 
             // txtporsiyonTuru
             // 
             txtporsiyonTuru.Location = new Point(234, 69);
             txtporsiyonTuru.Name = "txtporsiyonTuru";
-            txtporsiyonTuru.Size = new Size(165, 27);
+            txtporsiyonTuru.Size = new Size(370, 27);
             txtporsiyonTuru.TabIndex = 16;
             // 
             // PorsiyonEkranı
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(828, 485);
             Controls.Add(lblTuru);
             Controls.Add(txtporsiyonTuru);
             Controls.Add(btnPorsiyonGuncelle);

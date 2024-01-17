@@ -93,7 +93,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(904, 526);
             Controls.Add(cmbxKisi2);
             Controls.Add(cmbxKisi1);
             Controls.Add(btnRaporla);

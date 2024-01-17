@@ -37,37 +37,40 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(33, 28);
+            label1.Location = new Point(38, 37);
             label1.Name = "label1";
-            label1.Size = new Size(133, 15);
+            label1.Size = new Size(167, 20);
             label1.TabIndex = 0;
             label1.Text = "Gün Sonu Kalori Raporu";
             // 
             // dgvGunSonuKalori
             // 
             dgvGunSonuKalori.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvGunSonuKalori.Location = new Point(33, 57);
+            dgvGunSonuKalori.Location = new Point(38, 76);
+            dgvGunSonuKalori.Margin = new Padding(3, 4, 3, 4);
             dgvGunSonuKalori.Name = "dgvGunSonuKalori";
-            dgvGunSonuKalori.Size = new Size(343, 150);
+            dgvGunSonuKalori.RowHeadersWidth = 51;
+            dgvGunSonuKalori.Size = new Size(392, 200);
             dgvGunSonuKalori.TabIndex = 1;
             // 
             // lblToplamKalori
             // 
             lblToplamKalori.AutoSize = true;
-            lblToplamKalori.Location = new Point(33, 238);
+            lblToplamKalori.Location = new Point(38, 317);
             lblToplamKalori.Name = "lblToplamKalori";
-            lblToplamKalori.Size = new Size(97, 15);
+            lblToplamKalori.Size = new Size(124, 20);
             lblToplamKalori.TabIndex = 2;
             lblToplamKalori.Text = "Toplam Kaloriniz:";
             // 
             // GunSonuKaloriRaporEkrani
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(388, 331);
+            ClientSize = new Size(964, 518);
             Controls.Add(lblToplamKalori);
             Controls.Add(dgvGunSonuKalori);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "GunSonuKaloriRaporEkrani";
             Text = "GunSonuRaporEkrani";
             ((System.ComponentModel.ISupportInitialize)dgvGunSonuKalori).EndInit();
