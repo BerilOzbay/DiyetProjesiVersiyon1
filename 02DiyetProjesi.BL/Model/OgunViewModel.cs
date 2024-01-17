@@ -8,6 +8,7 @@ namespace _02DiyetProjesi.BL.Model
 {
     public class OgunViewModel
     {
+        public int Id { get; set; }
         public string Ad { get; set; }
     }
 }

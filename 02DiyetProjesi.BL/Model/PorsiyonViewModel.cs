@@ -8,6 +8,7 @@ namespace _02DiyetProjesi.BL.Model
 {
     public class PorsiyonViewModel
     {
+        public int Id { get; set; }
         public string Tur { get; set; }
     }
 }

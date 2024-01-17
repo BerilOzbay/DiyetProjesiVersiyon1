@@ -86,5 +86,19 @@ namespace _03DiyetProjesi.PL
             secilenOgun = (OgunViewModel)dgvOgunEkrani.SelectedRows[0].DataBoundItem;
             txtOgunAdi.Text = secilenOgun.Ad;
         }
+
+        private void btnOgunSil_Click(object sender, EventArgs e)
+        {
+            if (secilenOgun != null)
+            {
+                ogunManager.Delete(secilenOgun);
+                Goster();
+
+                MessageBox.Show("Başarıyla silinmiştir");
+                
+            }
+            else
+                MessageBox.Show("Ogun seçiniz!");
+        }
     }
 }

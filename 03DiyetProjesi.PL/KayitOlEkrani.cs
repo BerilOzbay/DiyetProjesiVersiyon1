@@ -32,6 +32,7 @@ namespace _03DiyetProjesi.PL
             kullaniciViewModel.Sifre=txtSifre.Text;
             KullaniciManager kullaniciManager = new KullaniciManager();
             kullaniciManager.Add(kullaniciViewModel);
+
         }
     }
 }
