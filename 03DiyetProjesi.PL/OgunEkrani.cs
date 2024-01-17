@@ -31,7 +31,7 @@ namespace _03DiyetProjesi.PL
         {
             try
             {
-                List<OgunViewModel> ogunler = ogunManager.GetAll().ToList();
+                List<OgunViewModel> ogunler = ogunManager.GetAll().Where(o=>o.Deleted==null).ToList();
                 return ogunler;
             }
             catch (Exception)
