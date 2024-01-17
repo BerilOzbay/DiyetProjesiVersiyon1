@@ -1,6 +1,6 @@
 ﻿namespace _03DiyetProjesi.PL
 {
-    partial class ÖğünEkranı
+    partial class OgunEkrani
     {
         /// <summary>
         /// Required designer variable.
@@ -39,68 +39,77 @@
             // 
             // txtOgunAdi
             // 
-            txtOgunAdi.Location = new Point(153, 72);
+            txtOgunAdi.Location = new Point(134, 54);
+            txtOgunAdi.Margin = new Padding(3, 2, 3, 2);
             txtOgunAdi.Name = "txtOgunAdi";
-            txtOgunAdi.Size = new Size(165, 27);
+            txtOgunAdi.Size = new Size(145, 23);
             txtOgunAdi.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(55, 72);
+            label1.Location = new Point(48, 54);
             label1.Name = "label1";
-            label1.Size = new Size(72, 20);
+            label1.Size = new Size(58, 15);
             label1.TabIndex = 1;
             label1.Text = "Öğün Adı";
             // 
             // dgvOgunEkrani
             // 
             dgvOgunEkrani.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvOgunEkrani.Location = new Point(12, 141);
+            dgvOgunEkrani.Location = new Point(10, 106);
+            dgvOgunEkrani.Margin = new Padding(3, 2, 3, 2);
             dgvOgunEkrani.Name = "dgvOgunEkrani";
             dgvOgunEkrani.RowHeadersWidth = 51;
-            dgvOgunEkrani.Size = new Size(488, 280);
+            dgvOgunEkrani.Size = new Size(427, 210);
             dgvOgunEkrani.TabIndex = 2;
+            dgvOgunEkrani.CellClick += dgvOgunEkrani_CellClick;
             // 
             // btnOgunEkle
             // 
-            btnOgunEkle.Location = new Point(12, 441);
+            btnOgunEkle.Location = new Point(10, 331);
+            btnOgunEkle.Margin = new Padding(3, 2, 3, 2);
             btnOgunEkle.Name = "btnOgunEkle";
-            btnOgunEkle.Size = new Size(130, 41);
+            btnOgunEkle.Size = new Size(114, 31);
             btnOgunEkle.TabIndex = 3;
             btnOgunEkle.Text = "EKLE";
             btnOgunEkle.UseVisualStyleBackColor = true;
+            btnOgunEkle.Click += btnOgunEkle_Click;
             // 
             // btnOgunSil
             // 
-            btnOgunSil.Location = new Point(164, 441);
+            btnOgunSil.Location = new Point(144, 331);
+            btnOgunSil.Margin = new Padding(3, 2, 3, 2);
             btnOgunSil.Name = "btnOgunSil";
-            btnOgunSil.Size = new Size(130, 41);
+            btnOgunSil.Size = new Size(114, 31);
             btnOgunSil.TabIndex = 4;
             btnOgunSil.Text = "SİL";
             btnOgunSil.UseVisualStyleBackColor = true;
             // 
             // btnOgunGuncelle
             // 
-            btnOgunGuncelle.Location = new Point(323, 441);
+            btnOgunGuncelle.Location = new Point(283, 331);
+            btnOgunGuncelle.Margin = new Padding(3, 2, 3, 2);
             btnOgunGuncelle.Name = "btnOgunGuncelle";
-            btnOgunGuncelle.Size = new Size(130, 41);
+            btnOgunGuncelle.Size = new Size(114, 31);
             btnOgunGuncelle.TabIndex = 5;
             btnOgunGuncelle.Text = "GÜNCELLE";
             btnOgunGuncelle.UseVisualStyleBackColor = true;
+            btnOgunGuncelle.Click += btnOgunGuncelle_Click;
             // 
-            // ÖğünEkranı
+            // OgunEkrani
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(726, 540);
+            ClientSize = new Size(635, 405);
             Controls.Add(btnOgunGuncelle);
             Controls.Add(btnOgunSil);
             Controls.Add(btnOgunEkle);
             Controls.Add(dgvOgunEkrani);
             Controls.Add(label1);
             Controls.Add(txtOgunAdi);
-            Name = "ÖğünEkranı";
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "OgunEkrani";
             Text = "ÖğünEkranı";
             ((System.ComponentModel.ISupportInitialize)dgvOgunEkrani).EndInit();
             ResumeLayout(false);
