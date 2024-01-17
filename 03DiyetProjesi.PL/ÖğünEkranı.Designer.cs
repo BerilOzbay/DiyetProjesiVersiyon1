@@ -39,24 +39,24 @@
             // 
             // txtOgunAdi
             // 
-            txtOgunAdi.Location = new Point(153, 72);
+            txtOgunAdi.Location = new Point(182, 67);
             txtOgunAdi.Name = "txtOgunAdi";
-            txtOgunAdi.Size = new Size(165, 27);
+            txtOgunAdi.Size = new Size(307, 27);
             txtOgunAdi.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(55, 72);
+            label1.Location = new Point(101, 70);
             label1.Name = "label1";
-            label1.Size = new Size(72, 20);
+            label1.Size = new Size(75, 20);
             label1.TabIndex = 1;
-            label1.Text = "Öğün Adı";
+            label1.Text = "Öğün Adı:";
             // 
             // dgvOgunEkrani
             // 
             dgvOgunEkrani.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvOgunEkrani.Location = new Point(12, 141);
+            dgvOgunEkrani.Location = new Point(69, 120);
             dgvOgunEkrani.Name = "dgvOgunEkrani";
             dgvOgunEkrani.RowHeadersWidth = 51;
             dgvOgunEkrani.Size = new Size(488, 280);
@@ -64,7 +64,7 @@
             // 
             // btnOgunEkle
             // 
-            btnOgunEkle.Location = new Point(12, 441);
+            btnOgunEkle.Location = new Point(67, 433);
             btnOgunEkle.Name = "btnOgunEkle";
             btnOgunEkle.Size = new Size(130, 41);
             btnOgunEkle.TabIndex = 3;
@@ -73,7 +73,7 @@
             // 
             // btnOgunSil
             // 
-            btnOgunSil.Location = new Point(164, 441);
+            btnOgunSil.Location = new Point(243, 433);
             btnOgunSil.Name = "btnOgunSil";
             btnOgunSil.Size = new Size(130, 41);
             btnOgunSil.TabIndex = 4;
@@ -82,7 +82,7 @@
             // 
             // btnOgunGuncelle
             // 
-            btnOgunGuncelle.Location = new Point(323, 441);
+            btnOgunGuncelle.Location = new Point(427, 433);
             btnOgunGuncelle.Name = "btnOgunGuncelle";
             btnOgunGuncelle.Size = new Size(130, 41);
             btnOgunGuncelle.TabIndex = 5;

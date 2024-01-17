@@ -65,6 +65,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(581, 496);
             Controls.Add(menuStrip1);
+            IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
             Margin = new Padding(3, 4, 3, 4);
             Name = "KullaniciAnaEkran";

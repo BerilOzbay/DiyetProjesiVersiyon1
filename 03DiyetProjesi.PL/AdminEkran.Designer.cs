@@ -95,6 +95,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1213, 527);
             Controls.Add(menuStrip1);
+            IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
             Name = "AdminEkran";
             Text = "AdminEkran";
