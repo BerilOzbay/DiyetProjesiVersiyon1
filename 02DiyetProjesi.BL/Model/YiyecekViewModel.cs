@@ -13,5 +13,9 @@ namespace _02DiyetProjesi.BL.Model
         public float Kalori { get; set; }
         //Yiyeceklerin gorseli tutulacak.
         public byte[] Resim { get; set; }
+        public override string ToString()
+        {
+            return Ad+"-"+Kalori;
+        }
     }
 }

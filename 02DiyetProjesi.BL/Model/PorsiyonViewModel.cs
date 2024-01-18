@@ -10,5 +10,9 @@ namespace _02DiyetProjesi.BL.Model
     {
         public int Id { get; set; }
         public string Tur { get; set; }
+        public override string ToString()
+        {
+            return Tur;
+        }
     }
 }
