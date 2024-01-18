@@ -2,6 +2,8 @@ using _01DiyetProjesi.DAL.Context.EF;
 using _01DiyetProjesi.DAL.Entities.Concrete;
 using _02DiyetProjesi.BL.Manager.Concrete;
 using _02DiyetProjesi.BL.Model;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace _03DiyetProjesi.PL
 {
@@ -22,33 +24,36 @@ namespace _03DiyetProjesi.PL
             kayitOlEkrani.Show();
 
         }
-
+        private string sha256_hash(string sifre)
+        {
+            using (SHA256 hash = SHA256Managed.Create())
+            {
+                return string.Concat(hash.ComputeHash(Encoding.UTF8.GetBytes(sifre)).Select(l => l.ToString("X2")));
+            }
+        }
         private void btnGiris_Click(object sender, EventArgs e)
         {
-        KullaniciViewModel kullaniciViewModel = new KullaniciViewModel();
-            
-            if ((kullaniciManager.GetAll().ToList().FirstOrDefault(a => a.Email.Contains(txtMail.Text)&&a.Sifre.Contains(txtSifre.Text)) != null))
-            {
-                
-            if (!string.IsNullOrWhiteSpace(txtMail.Text))
-            {
-                    kullaniciViewModel.Email = txtMail.Text;
+            KullaniciViewModel kullaniciViewModel = kullaniciManager.GetAll().FirstOrDefault(a => a.Email.Contains(txtMail.Text) && a.Sifre == sha256_hash(txtSifre.Text));
 
-                    if (kullaniciViewModel.IsAdmin == true)
+            if (kullaniciViewModel != null)
+            {
+                if (!string.IsNullOrWhiteSpace(txtMail.Text))
                 {
-                    AdminEkran adminEkran = new AdminEkran();
-                    adminEkran.Show();
+                    if (kullaniciViewModel.IsAdmin)
+                    {
+                        AdminEkran adminEkran = new AdminEkran();
+                        adminEkran.Show();
+                    }
+                    else
+                    {
+                        KullaniciAnaEkran kullaniciAnaEkran = new KullaniciAnaEkran();
+                        kullaniciAnaEkran.Show();
+                    }
                 }
-                else
-                {
-                    KullaniciAnaEkran kullaniciAnaEkran = new KullaniciAnaEkran();
-                    kullaniciAnaEkran.Show();
-                }
-            }
             }
             else
             {
-                MessageBox.Show("Lütfen Kayýt yapýnýz.");
+                MessageBox.Show("Kullanýcý bilgileri geçersiz. Lütfen kayýt yapýnýz.");
                 KayitOlEkrani kayitOlEkrani = new KayitOlEkrani();
                 kayitOlEkrani.Show();
             }
