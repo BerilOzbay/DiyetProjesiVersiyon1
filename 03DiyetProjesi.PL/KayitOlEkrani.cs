@@ -101,7 +101,11 @@ namespace _03DiyetProjesi.PL
 
             KullaniciManager kullaniciManager = new KullaniciManager();
             kullaniciManager.Add(kullaniciViewModel);
+            MessageBox.Show("Kullanıcı başarıyla kayıt olmuştur.");
+            this.Close();
+            
         }
+        
     }
 }
 
