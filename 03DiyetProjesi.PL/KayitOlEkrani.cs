@@ -63,11 +63,15 @@ namespace _03DiyetProjesi.PL
             kullaniciViewModel.Cinsiyet = rBtnErkek.Checked ? Cinsiyet.Erkek : Cinsiyet.Kadın;
 
             kullaniciViewModel.Email = txtMail.Text;
-
+            kullaniciViewModel.IsAdmin = txtMail.Text.Contains("@yonetici") ? true : false;
             if (string.IsNullOrWhiteSpace(kullaniciViewModel.Email))
             {
                 MessageBox.Show("Email boş bırakılamaz");
                 return;
+            }
+            if (!kullaniciViewModel.Email.Contains("@"))
+            {
+                MessageBox.Show("Lütfen mail adresi giriniz.");
             }
 
             string[] specialCharacters = { "*", "!", "+", "%", "/", "<", ">", "-", "{", "}", "(", ")", "?", "-", "_", "&", "^",".",","};

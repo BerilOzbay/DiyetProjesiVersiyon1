@@ -15,6 +15,7 @@ namespace _02DiyetProjesi.BL.Model
         public string Email { get; set; }
         public string Sifre { get; set; }
         public Cinsiyet Cinsiyet { get; set; }
+        public bool IsAdmin { get; set; }
         public byte Yas { get; set; }
         public float Kilo { get; set; }
     }

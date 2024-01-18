@@ -8,7 +8,7 @@ namespace _03DiyetProjesi.PL
     public partial class GirisEkrani : Form
     {
         KullaniciManager kullaniciManager = new KullaniciManager();
-
+        
 
 
         public GirisEkrani()
@@ -25,18 +25,16 @@ namespace _03DiyetProjesi.PL
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-        KullaniciViewModel KullaniciViewModel = new KullaniciViewModel();
-
-
+        KullaniciViewModel kullaniciViewModel = new KullaniciViewModel();
             
             if ((kullaniciManager.GetAll().ToList().FirstOrDefault(a => a.Email.Contains(txtMail.Text)&&a.Sifre.Contains(txtSifre.Text)) != null))
             {
                 
             if (!string.IsNullOrWhiteSpace(txtMail.Text))
             {
-                KullaniciViewModel.Email = txtMail.Text;
+                    kullaniciViewModel.Email = txtMail.Text;
 
-                if (KullaniciViewModel.Email.Contains("@yonetici"))
+                    if (kullaniciViewModel.IsAdmin == true)
                 {
                     AdminEkran adminEkran = new AdminEkran();
                     adminEkran.Show();
