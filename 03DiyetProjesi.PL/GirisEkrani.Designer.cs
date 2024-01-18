@@ -30,8 +30,8 @@
         {
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtMail = new TextBox();
+            txtSifre = new TextBox();
             btnGiris = new Button();
             btnKayitOl = new Button();
             SuspendLayout();
@@ -54,21 +54,21 @@
             label2.TabIndex = 1;
             label2.Text = "Şifre";
             // 
-            // textBox1
+            // txtMail
             // 
-            textBox1.Location = new Point(114, 65);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(114, 27);
-            textBox1.TabIndex = 2;
+            txtMail.Location = new Point(114, 65);
+            txtMail.Margin = new Padding(3, 4, 3, 4);
+            txtMail.Name = "txtMail";
+            txtMail.Size = new Size(114, 27);
+            txtMail.TabIndex = 2;
             // 
-            // textBox2
+            // txtSifre
             // 
-            textBox2.Location = new Point(114, 111);
-            textBox2.Margin = new Padding(3, 4, 3, 4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(114, 27);
-            textBox2.TabIndex = 3;
+            txtSifre.Location = new Point(114, 111);
+            txtSifre.Margin = new Padding(3, 4, 3, 4);
+            txtSifre.Name = "txtSifre";
+            txtSifre.Size = new Size(114, 27);
+            txtSifre.TabIndex = 3;
             // 
             // btnGiris
             // 
@@ -99,8 +99,8 @@
             ClientSize = new Size(296, 300);
             Controls.Add(btnKayitOl);
             Controls.Add(btnGiris);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtSifre);
+            Controls.Add(txtMail);
             Controls.Add(label2);
             Controls.Add(label1);
             Margin = new Padding(3, 4, 3, 4);
@@ -114,8 +114,8 @@
 
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtMail;
+        private TextBox txtSifre;
         private Button btnGiris;
         private Button btnKayitOl;
     }

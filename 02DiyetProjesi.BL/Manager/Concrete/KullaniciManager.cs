@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 namespace _02DiyetProjesi.BL.Manager.Concrete
 {
     public class KullaniciManager : GenericManager<Kullanici,KullaniciRepository,EfDbContext,KullaniciViewModel>
-    {
+    {  
         #region MyRegion
         //private KullaniciRepository _kullaniciRepository;
         //public KullaniciManager()

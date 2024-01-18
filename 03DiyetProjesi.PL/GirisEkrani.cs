@@ -1,3 +1,4 @@
+using _01DiyetProjesi.DAL.Context.EF;
 using _01DiyetProjesi.DAL.Entities.Concrete;
 using _02DiyetProjesi.BL.Manager.Concrete;
 using _02DiyetProjesi.BL.Model;
@@ -7,7 +8,7 @@ namespace _03DiyetProjesi.PL
     public partial class GirisEkrani : Form
     {
         KullaniciManager kullaniciManager = new KullaniciManager();
-        KullaniciViewModel KullaniciViewModel = new KullaniciViewModel();
+
 
 
         public GirisEkrani()
@@ -24,9 +25,16 @@ namespace _03DiyetProjesi.PL
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(textBox1.Text))
+        KullaniciViewModel KullaniciViewModel = new KullaniciViewModel();
+
+
+            
+            if ((kullaniciManager.GetAll().ToList().FirstOrDefault(a => a.Email.Contains(txtMail.Text)&&a.Sifre.Contains(txtSifre.Text)) != null))
             {
-                KullaniciViewModel.Email = textBox1.Text;
+                
+            if (!string.IsNullOrWhiteSpace(txtMail.Text))
+            {
+                KullaniciViewModel.Email = txtMail.Text;
 
                 if (KullaniciViewModel.Email.Contains("@yonetici"))
                 {
@@ -39,9 +47,12 @@ namespace _03DiyetProjesi.PL
                     kullaniciAnaEkran.Show();
                 }
             }
+            }
             else
             {
-                MessageBox.Show("Lütfen bilgilerinizi giriniz");
+                MessageBox.Show("Lütfen Kayýt yapýnýz.");
+                KayitOlEkrani kayitOlEkrani = new KayitOlEkrani();
+                kayitOlEkrani.Show();
             }
         }
     }
