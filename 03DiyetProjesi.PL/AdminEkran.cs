@@ -12,7 +12,7 @@ namespace _03DiyetProjesi.PL
 {
     public partial class AdminEkran : Form
     {
-        public AdminEkran()
+        public AdminEkran(int kullaniciId)
         {
             InitializeComponent();
         }

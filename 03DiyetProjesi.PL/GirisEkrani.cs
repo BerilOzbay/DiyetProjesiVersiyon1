@@ -10,10 +10,8 @@ namespace _03DiyetProjesi.PL
     public partial class GirisEkrani : Form
     {
         KullaniciManager kullaniciManager = new KullaniciManager();
-        
-
-
-        public GirisEkrani()
+              
+        public GirisEkrani(int kullaniciId)
         {
             InitializeComponent();
         }
@@ -39,14 +37,15 @@ namespace _03DiyetProjesi.PL
             {
                 if (!string.IsNullOrWhiteSpace(txtMail.Text))
                 {
+                    int kullaniciId = kullaniciViewModel.Id;
                     if (kullaniciViewModel.IsAdmin)
                     {
-                        AdminEkran adminEkran = new AdminEkran();
+                        AdminEkran adminEkran = new AdminEkran(kullaniciId);
                         adminEkran.Show();
                     }
                     else
                     {
-                        KullaniciAnaEkran kullaniciAnaEkran = new KullaniciAnaEkran();
+                        KullaniciAnaEkran kullaniciAnaEkran = new KullaniciAnaEkran(kullaniciId);
                         kullaniciAnaEkran.Show();
                     }
                 }
