@@ -12,10 +12,13 @@ namespace _03DiyetProjesi.PL
 {
     public partial class KullaniciAnaEkran : Form
     {
+        private int kullaniciId;
         public KullaniciAnaEkran(int kullaniciId)
         {
             InitializeComponent();
+            this.kullaniciId = kullaniciId;
         }
+
         private void FormAc(Form gosterilecekForm)
         {
 

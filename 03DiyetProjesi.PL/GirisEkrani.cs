@@ -11,10 +11,11 @@ namespace _03DiyetProjesi.PL
     {
         KullaniciManager kullaniciManager = new KullaniciManager();
               
-        public GirisEkrani(int kullaniciId)
+        public GirisEkrani()
         {
             InitializeComponent();
         }
+     
 
         private void btnKayitOl_Click(object sender, EventArgs e)
         {

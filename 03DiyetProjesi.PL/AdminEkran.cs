@@ -12,9 +12,12 @@ namespace _03DiyetProjesi.PL
 {
     public partial class AdminEkran : Form
     {
+        private int kullaniciId;
         public AdminEkran(int kullaniciId)
         {
             InitializeComponent();
+            this.kullaniciId = kullaniciId;
+            
         }
         private void FormAc(Form gosterilecekForm)
         {
