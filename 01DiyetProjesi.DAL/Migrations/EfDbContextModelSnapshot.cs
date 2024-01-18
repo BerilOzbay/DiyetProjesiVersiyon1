@@ -54,9 +54,6 @@ namespace _01DiyetProjesi.DAL.Migrations
                     b.Property<int>("PorsiyonId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("YenilenGun")
-                        .HasColumnType("datetime2");
-
                     b.Property<int>("YiyecekId")
                         .HasColumnType("int");
 

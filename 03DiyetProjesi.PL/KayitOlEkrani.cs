@@ -70,7 +70,7 @@ namespace _03DiyetProjesi.PL
                 return;
             }
 
-            string[] specialCharacters = { "*", "!", "+", "%", "/", "<", ">", "-", "{", "}", "(", ")", "?", "-", "_", "&", "^" };
+            string[] specialCharacters = { "*", "!", "+", "%", "/", "<", ">", "-", "{", "}", "(", ")", "?", "-", "_", "&", "^",".",","};
 
             kullaniciViewModel.Sifre = sha256_hash(txtSifre.Text);
 

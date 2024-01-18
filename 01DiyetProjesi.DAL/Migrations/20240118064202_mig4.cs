@@ -6,10 +6,18 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace _01DiyetProjesi.DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class mig3 : Migration
+    public partial class mig4 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropColumn(
+                name: "YenilenGun",
+                table: "DiyetTablolari");
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<DateTime>(
                 name: "YenilenGun",
@@ -17,14 +25,6 @@ namespace _01DiyetProjesi.DAL.Migrations
                 type: "datetime2",
                 nullable: false,
                 defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
-        }
-
-        /// <inheritdoc />
-        protected override void Down(MigrationBuilder migrationBuilder)
-        {
-            migrationBuilder.DropColumn(
-                name: "YenilenGun",
-                table: "DiyetTablolari");
         }
     }
 }
