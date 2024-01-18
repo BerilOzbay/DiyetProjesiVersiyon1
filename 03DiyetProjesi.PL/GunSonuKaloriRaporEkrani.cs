@@ -26,6 +26,8 @@ namespace _03DiyetProjesi.PL
         List<KullaniciViewModel> kullanicilar;
         List<OgunViewModel> ogunler;
         List<PorsiyonViewModel> porsiyonlar;
+        
+
 
         public GunSonuKaloriRaporEkrani()
         {
@@ -38,7 +40,6 @@ namespace _03DiyetProjesi.PL
             ogunler = OgunManager.GetAll().ToList();
             porsiyonlar = PorsiyonManager.GetAll().ToList();
             kullanicilar = KullaniciManager.GetAll().ToList();
-
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -108,6 +109,7 @@ namespace _03DiyetProjesi.PL
         }
         private float TumKalorileriGetir()
         {
+            
             float toplamKalori = 0;
             Doldur();
             DiyetTablosuManager diyetTablosuManager = new DiyetTablosuManager();
