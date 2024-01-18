@@ -1,4 +1,5 @@
-﻿using _01DiyetProjesi.DAL.Entities.Concrete;
+﻿using _01DiyetProjesi.DAL.Context.EF;
+using _01DiyetProjesi.DAL.Entities.Concrete;
 using _01DiyetProjesi.DAL.Repository.Abstract;
 using Microsoft.EntityFrameworkCore;
 using System;

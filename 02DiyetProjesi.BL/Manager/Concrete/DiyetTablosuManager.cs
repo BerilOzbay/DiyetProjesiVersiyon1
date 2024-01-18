@@ -13,5 +13,6 @@ namespace _02DiyetProjesi.BL.Manager.Concrete
 {
     public class DiyetTablosuManager : GenericManager<DiyetTablosu, DiyetTablosuRepository, EfDbContext, DiyetTablosuViewModel>
     {
+
     }
 }

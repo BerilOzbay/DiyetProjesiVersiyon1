@@ -30,8 +30,11 @@
         {
             label1 = new Label();
             dgvGunSonuKalori = new DataGridView();
-            lblToplamKalori = new Label();
+            Label = new Label();
             dateTimePicker1 = new DateTimePicker();
+            label2 = new Label();
+            lblGunSonuKalorisi = new Label();
+            lblToplamKalori = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvGunSonuKalori).BeginInit();
             SuspendLayout();
             // 
@@ -54,14 +57,14 @@
             dgvGunSonuKalori.Size = new Size(893, 414);
             dgvGunSonuKalori.TabIndex = 1;
             // 
-            // lblToplamKalori
+            // Label
             // 
-            lblToplamKalori.AutoSize = true;
-            lblToplamKalori.Location = new Point(38, 512);
-            lblToplamKalori.Name = "lblToplamKalori";
-            lblToplamKalori.Size = new Size(124, 20);
-            lblToplamKalori.TabIndex = 2;
-            lblToplamKalori.Text = "Toplam Kaloriniz:";
+            Label.AutoSize = true;
+            Label.Location = new Point(38, 524);
+            Label.Name = "Label";
+            Label.Size = new Size(195, 20);
+            Label.TabIndex = 2;
+            Label.Text = "Gün Sonu Toplam Kaloriniz :";
             // 
             // dateTimePicker1
             // 
@@ -71,13 +74,41 @@
             dateTimePicker1.TabIndex = 3;
             dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(38, 571);
+            label2.Name = "label2";
+            label2.Size = new Size(128, 20);
+            label2.TabIndex = 4;
+            label2.Text = "Toplam Kaloriniz :";
+            // 
+            // lblGunSonuKalorisi
+            // 
+            lblGunSonuKalorisi.BorderStyle = BorderStyle.FixedSingle;
+            lblGunSonuKalorisi.Location = new Point(252, 524);
+            lblGunSonuKalorisi.Name = "lblGunSonuKalorisi";
+            lblGunSonuKalorisi.Size = new Size(166, 25);
+            lblGunSonuKalorisi.TabIndex = 5;
+            // 
+            // lblToplamKalori
+            // 
+            lblToplamKalori.BorderStyle = BorderStyle.FixedSingle;
+            lblToplamKalori.Location = new Point(252, 571);
+            lblToplamKalori.Name = "lblToplamKalori";
+            lblToplamKalori.Size = new Size(166, 25);
+            lblToplamKalori.TabIndex = 6;
+            // 
             // GunSonuKaloriRaporEkrani
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1035, 568);
-            Controls.Add(dateTimePicker1);
+            ClientSize = new Size(1035, 630);
             Controls.Add(lblToplamKalori);
+            Controls.Add(lblGunSonuKalorisi);
+            Controls.Add(label2);
+            Controls.Add(dateTimePicker1);
+            Controls.Add(Label);
             Controls.Add(dgvGunSonuKalori);
             Controls.Add(label1);
             Margin = new Padding(3, 4, 3, 4);
@@ -92,7 +123,10 @@
 
         private Label label1;
         private DataGridView dgvGunSonuKalori;
-        private Label lblToplamKalori;
+        private Label Label;
         private DateTimePicker dateTimePicker1;
+        private Label label2;
+        private Label lblGunSonuKalorisi;
+        private Label lblToplamKalori;
     }
 }

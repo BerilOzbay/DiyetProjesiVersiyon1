@@ -29,32 +29,45 @@
         private void InitializeComponent()
         {
             dgvTumKullanicilar = new DataGridView();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvTumKullanicilar).BeginInit();
             SuspendLayout();
             // 
             // dgvTumKullanicilar
             // 
             dgvTumKullanicilar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTumKullanicilar.Location = new Point(12, 34);
+            dgvTumKullanicilar.Location = new Point(69, 86);
             dgvTumKullanicilar.Name = "dgvTumKullanicilar";
             dgvTumKullanicilar.RowHeadersWidth = 51;
-            dgvTumKullanicilar.Size = new Size(763, 389);
+            dgvTumKullanicilar.Size = new Size(1086, 515);
             dgvTumKullanicilar.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(69, 38);
+            label1.Name = "label1";
+            label1.Size = new Size(202, 20);
+            label1.TabIndex = 1;
+            label1.Text = "Kayıtlı Olan Tüm Kullanıcılar :";
             // 
             // TümKullanicilarEkrani
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1220, 654);
+            Controls.Add(label1);
             Controls.Add(dgvTumKullanicilar);
             Name = "TümKullanicilarEkrani";
             Text = "TümKullanicilarEkrani";
             ((System.ComponentModel.ISupportInitialize)dgvTumKullanicilar).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private DataGridView dgvTumKullanicilar;
+        private Label label1;
     }
 }

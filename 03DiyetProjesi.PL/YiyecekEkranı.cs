@@ -15,7 +15,6 @@ namespace _03DiyetProjesi.PL
     public partial class YiyecekEkranı : Form
     {
         YiyecekViewModel secilenYiyecek;
-        YiyecekManager yiyecekManager = new YiyecekManager();
 
         public YiyecekEkranı()
         {
@@ -61,6 +60,7 @@ namespace _03DiyetProjesi.PL
             {
                 if (!string.IsNullOrWhiteSpace(txtYiyecekAdi.Text) && float.TryParse(txtKalori.Text, out float kaloriValue))
                 {
+                    YiyecekManager yiyecekManager = new YiyecekManager();
                     YiyecekViewModel yiyecekViewModel = new YiyecekViewModel();
                     yiyecekViewModel.Ad = txtYiyecekAdi.Text;
                     yiyecekViewModel.Kalori = kaloriValue;
@@ -95,6 +95,7 @@ namespace _03DiyetProjesi.PL
             {
                 if (secilenYiyecek != null)
                 {
+                    YiyecekManager yiyecekManager = new YiyecekManager();
                     yiyecekManager.Delete(secilenYiyecek);
                     secilenYiyecek = null;
                     pbYiyecekResmi.Image = null;
@@ -123,6 +124,7 @@ namespace _03DiyetProjesi.PL
                 {
                     if (!string.IsNullOrWhiteSpace(txtYiyecekAdi.Text) && float.TryParse(txtKalori.Text, out float kaloriValue))
                     {
+                        YiyecekManager yiyecekManager = new YiyecekManager();
                         // TextBox'lara giriş yapıldı ve kalori bir sayıya dönüştürülebiliyor
                         secilenYiyecek.Ad = txtYiyecekAdi.Text;
                         secilenYiyecek.Kalori = kaloriValue;
