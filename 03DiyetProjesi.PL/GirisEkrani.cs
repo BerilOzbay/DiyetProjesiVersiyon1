@@ -36,9 +36,9 @@ namespace _03DiyetProjesi.PL
 
             if (kullaniciViewModel != null)
             {
+                int kullaniciId = kullaniciViewModel.Id;
                 if (!string.IsNullOrWhiteSpace(txtMail.Text))
                 {
-                    int kullaniciId = kullaniciViewModel.Id;
                     if (kullaniciViewModel.IsAdmin)
                     {
                         AdminEkran adminEkran = new AdminEkran(kullaniciId);

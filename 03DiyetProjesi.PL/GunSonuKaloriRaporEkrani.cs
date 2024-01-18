@@ -26,12 +26,13 @@ namespace _03DiyetProjesi.PL
         List<KullaniciViewModel> kullanicilar;
         List<OgunViewModel> ogunler;
         List<PorsiyonViewModel> porsiyonlar;
-        
 
 
-        public GunSonuKaloriRaporEkrani()
+        public int kullanıcıId;
+        public GunSonuKaloriRaporEkrani(int kullaniciId)
         {
             InitializeComponent();
+            this.kullanıcıId = kullaniciId;
             lblToplamKalori.Text = TumKalorileriGetir().ToString();
         }
         private void Doldur()
@@ -62,7 +63,7 @@ namespace _03DiyetProjesi.PL
             {
                 List<DiyetTablosuViewModel> yemekler = diyetTablosuManager
                     .GetAll()
-                    .Where(dt => dt.YenilenGun.Date == selectedDate.Date)
+                    .Where(dt => dt.YenilenGun.Date == selectedDate.Date && dt.KullaniciId == kullanıcıId)
                     .ToList();
 
                 float toplamKalori = 0;
@@ -118,7 +119,7 @@ namespace _03DiyetProjesi.PL
                 List<DiyetTablosuViewModel> yemekler = diyetTablosuManager
                     .GetAll()
                     // buraya 
-                    //.Where(k => k.KullaniciId == )
+                    .Where(k => k.KullaniciId == kullanıcıId)
                     .ToList();
 
                 foreach (var d in yemekler)

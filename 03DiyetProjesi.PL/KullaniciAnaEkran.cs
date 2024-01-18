@@ -12,7 +12,7 @@ namespace _03DiyetProjesi.PL
 {
     public partial class KullaniciAnaEkran : Form
     {
-        private int kullaniciId;
+        public int kullaniciId;
         public KullaniciAnaEkran(int kullaniciId)
         {
             InitializeComponent();
@@ -43,7 +43,7 @@ namespace _03DiyetProjesi.PL
 
         private void günSonuKaloriRaporuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormAc(new GunSonuKaloriRaporEkrani());
+            FormAc(new GunSonuKaloriRaporEkrani(kullaniciId));
         }
     }
 }
