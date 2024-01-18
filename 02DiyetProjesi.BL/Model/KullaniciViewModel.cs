@@ -1,4 +1,5 @@
-﻿using _01DiyetProjesi.DAL.Enums;
+﻿using _01DiyetProjesi.DAL.Entities.Concrete;
+using _01DiyetProjesi.DAL.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,5 +19,11 @@ namespace _02DiyetProjesi.BL.Model
         public bool IsAdmin { get; set; }
         public byte Yas { get; set; }
         public float Kilo { get; set; }
+        public ICollection<DiyetTablosu> DiyetTablolari { get; set; }
+
+        public override string ToString()
+        {
+            return Ad + " " + Soyad;
+        }
     }
 }
