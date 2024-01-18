@@ -58,5 +58,10 @@ namespace _03DiyetProjesi.PL
         {
             FormAc(new EnCokYenenYemekEkrani());
         }
+
+        private void tümKullanıcılarEkranıToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAc(new TümKullanicilarEkrani());
+        }
     }
 }

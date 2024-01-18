@@ -44,61 +44,61 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { öğünEkranıToolStripMenuItem, yiyecekEkranıToolStripMenuItem, porsiyonEkranıToolStripMenuItem, kıyaslamaEkranıToolStripMenuItem, enÇokYenenYemekEkranıToolStripMenuItem, tümKullanıcılarEkranıToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(5, 2, 0, 2);
-            menuStrip1.Size = new Size(1061, 24);
+            menuStrip1.Padding = new Padding(6, 3, 0, 3);
+            menuStrip1.Size = new Size(1213, 30);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // öğünEkranıToolStripMenuItem
             // 
             öğünEkranıToolStripMenuItem.Name = "öğünEkranıToolStripMenuItem";
-            öğünEkranıToolStripMenuItem.Size = new Size(84, 20);
+            öğünEkranıToolStripMenuItem.Size = new Size(103, 24);
             öğünEkranıToolStripMenuItem.Text = "Öğün Ekranı";
             öğünEkranıToolStripMenuItem.Click += öğünEkranıToolStripMenuItem_Click;
             // 
             // yiyecekEkranıToolStripMenuItem
             // 
             yiyecekEkranıToolStripMenuItem.Name = "yiyecekEkranıToolStripMenuItem";
-            yiyecekEkranıToolStripMenuItem.Size = new Size(94, 20);
+            yiyecekEkranıToolStripMenuItem.Size = new Size(116, 24);
             yiyecekEkranıToolStripMenuItem.Text = "Yiyecek Ekranı";
             yiyecekEkranıToolStripMenuItem.Click += yiyecekEkranıToolStripMenuItem_Click;
             // 
             // porsiyonEkranıToolStripMenuItem
             // 
             porsiyonEkranıToolStripMenuItem.Name = "porsiyonEkranıToolStripMenuItem";
-            porsiyonEkranıToolStripMenuItem.Size = new Size(100, 20);
+            porsiyonEkranıToolStripMenuItem.Size = new Size(122, 24);
             porsiyonEkranıToolStripMenuItem.Text = "Porsiyon Ekranı";
             porsiyonEkranıToolStripMenuItem.Click += porsiyonEkranıToolStripMenuItem_Click;
             // 
             // kıyaslamaEkranıToolStripMenuItem
             // 
             kıyaslamaEkranıToolStripMenuItem.Name = "kıyaslamaEkranıToolStripMenuItem";
-            kıyaslamaEkranıToolStripMenuItem.Size = new Size(107, 20);
+            kıyaslamaEkranıToolStripMenuItem.Size = new Size(134, 24);
             kıyaslamaEkranıToolStripMenuItem.Text = "Kıyaslama Ekranı";
             kıyaslamaEkranıToolStripMenuItem.Click += kıyaslamaEkranıToolStripMenuItem_Click;
             // 
             // enÇokYenenYemekEkranıToolStripMenuItem
             // 
             enÇokYenenYemekEkranıToolStripMenuItem.Name = "enÇokYenenYemekEkranıToolStripMenuItem";
-            enÇokYenenYemekEkranıToolStripMenuItem.Size = new Size(164, 20);
+            enÇokYenenYemekEkranıToolStripMenuItem.Size = new Size(202, 24);
             enÇokYenenYemekEkranıToolStripMenuItem.Text = "En Çok Yenen Yemek Ekranı";
             enÇokYenenYemekEkranıToolStripMenuItem.Click += enÇokYenenYemekEkranıToolStripMenuItem_Click;
             // 
             // tümKullanıcılarEkranıToolStripMenuItem
             // 
             tümKullanıcılarEkranıToolStripMenuItem.Name = "tümKullanıcılarEkranıToolStripMenuItem";
-            tümKullanıcılarEkranıToolStripMenuItem.Size = new Size(139, 20);
+            tümKullanıcılarEkranıToolStripMenuItem.Size = new Size(173, 24);
             tümKullanıcılarEkranıToolStripMenuItem.Text = "Tüm Kullanıcılar Ekranı";
+            tümKullanıcılarEkranıToolStripMenuItem.Click += tümKullanıcılarEkranıToolStripMenuItem_Click;
             // 
             // AdminEkran
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1061, 395);
+            ClientSize = new Size(1213, 527);
             Controls.Add(menuStrip1);
             IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "AdminEkran";
             Text = "AdminEkran";
             menuStrip1.ResumeLayout(false);
