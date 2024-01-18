@@ -12,8 +12,8 @@ using _01DiyetProjesi.DAL.Context.EF;
 namespace _01DiyetProjesi.DAL.Migrations
 {
     [DbContext(typeof(EfDbContext))]
-    [Migration("20240118064202_mig4")]
-    partial class mig4
+    [Migration("20240118083120_mig3")]
+    partial class mig3
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,6 +56,9 @@ namespace _01DiyetProjesi.DAL.Migrations
 
                     b.Property<int>("PorsiyonId")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("YenilenGun")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("YiyecekId")
                         .HasColumnType("int");
