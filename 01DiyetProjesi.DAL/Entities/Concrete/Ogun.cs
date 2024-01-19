@@ -10,6 +10,10 @@ namespace _01DiyetProjesi.DAL.Entities.Concrete
     public class Ogun : BaseEntity
     {
         public string Ad { get; set; }
-        public ICollection<DiyetTablosu> DiyetTablolari { get; set; }
+        public virtual ICollection<DiyetTablosu> DiyetTablolari { get; set; }
+        public override string ToString()
+        {
+            return Ad;
+        }
     }
 }

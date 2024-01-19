@@ -14,7 +14,7 @@ namespace _03DiyetProjesi.PL
 {
     public partial class OgunEkrani : Form
     {
-        OgunManager ogunManager = new OgunManager();
+        
         OgunViewModel secilenOgun;
 
         public OgunEkrani()
@@ -26,9 +26,11 @@ namespace _03DiyetProjesi.PL
         {
             dgvOgunEkrani.DataSource = null;
             dgvOgunEkrani.DataSource = OgunleriGetir();
+            dgvOgunEkrani.Columns[2].Visible = false;
         }
         private List<OgunViewModel> OgunleriGetir()
         {
+            OgunManager ogunManager = new OgunManager();
             try
             {
                 List<OgunViewModel> ogunler = ogunManager.GetAll().Where(o=>o.Deleted==null).ToList();
@@ -44,6 +46,7 @@ namespace _03DiyetProjesi.PL
         {
             try
             {
+                OgunManager ogunManager = new OgunManager();
                 OgunViewModel ogun = new OgunViewModel();
                 ogun.Ad = txtOgunAdi.Text;
                 ogunManager.Add(ogun);
@@ -64,8 +67,10 @@ namespace _03DiyetProjesi.PL
         {
             try
             {
+                
                 if (secilenOgun != null)
                 {
+                    OgunManager ogunManager = new OgunManager();
                     secilenOgun.Ad = txtOgunAdi.Text;
                     ogunManager.Update(secilenOgun);
                     Goster();
@@ -91,6 +96,7 @@ namespace _03DiyetProjesi.PL
         {
             if (secilenOgun != null)
             {
+                OgunManager ogunManager = new OgunManager();
                 ogunManager.Delete(secilenOgun);
                 Goster();
 

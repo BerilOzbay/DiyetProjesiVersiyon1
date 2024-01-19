@@ -70,10 +70,10 @@ namespace _03DiyetProjesi.PL
 
                 foreach (var d in yemekler)
                 {
-                    d.Yiyecek = yiyecekler.Where(y => y.Id == d.YiyecekId).FirstOrDefault();
-                    d.Kullanici = kullanicilar.Where(k => k.Id == d.KullaniciId).FirstOrDefault();
-                    d.Porsiyon = porsiyonlar.Where(p => p.Id == d.PorsiyonId).FirstOrDefault();
-                    d.Ogun = ogunler.Where(o => o.Id == d.OgunId).FirstOrDefault();
+                    //d.Yiyecek = yiyecekler.Where(y => y.Id == d.YiyecekId).FirstOrDefault();
+                    //d.Kullanici = kullanicilar.Where(k => k.Id == d.KullaniciId).FirstOrDefault();
+                    //d.Porsiyon = porsiyonlar.Where(p => p.Id == d.PorsiyonId).FirstOrDefault();
+                    //d.Ogun = ogunler.Where(o => o.Id == d.OgunId).FirstOrDefault();
 
                     if(d.Yiyecek != null)
                     {
@@ -124,10 +124,10 @@ namespace _03DiyetProjesi.PL
 
                 foreach (var d in yemekler)
                 {
-                    d.Yiyecek = yiyecekler.Where(y => y.Id == d.YiyecekId).FirstOrDefault();
-                    d.Kullanici = kullanicilar.Where(k => k.Id == d.KullaniciId).FirstOrDefault();
-                    d.Porsiyon = porsiyonlar.Where(p => p.Id == d.PorsiyonId).FirstOrDefault();
-                    d.Ogun = ogunler.Where(o => o.Id == d.OgunId).FirstOrDefault();
+                    //    d.Yiyecek = yiyecekler.Where(y => y.Id == d.YiyecekId).FirstOrDefault();
+                    //    d.Kullanici = kullanicilar.Where(k => k.Id == d.KullaniciId).FirstOrDefault();
+                    //    d.Porsiyon = porsiyonlar.Where(p => p.Id == d.PorsiyonId).FirstOrDefault();
+                    //    d.Ogun = ogunler.Where(o => o.Id == d.OgunId).FirstOrDefault();
 
                     if (d.Yiyecek != null)
                     {

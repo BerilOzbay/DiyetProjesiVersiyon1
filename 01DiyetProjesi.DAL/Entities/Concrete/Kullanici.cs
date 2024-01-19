@@ -19,7 +19,11 @@ namespace _01DiyetProjesi.DAL.Entities.Concrete
         public Cinsiyet Cinsiyet { get; set; }
         public byte Yas { get; set; }
         public float Kilo { get; set; }
-        public ICollection<DiyetTablosu> DiyetTablolari {get; set;}
+        public virtual ICollection<DiyetTablosu> DiyetTablolari {get; set;}
+        public override string ToString()
+        {
+            return Ad + " " + Soyad;
+        }
 
     }
 }

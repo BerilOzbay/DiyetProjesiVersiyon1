@@ -16,5 +16,7 @@ namespace _02DiyetProjesi.BL.Manager.Abstract
         TModel GetById(int id);
         ICollection<TModel> GetAll();
         ICollection<TModel> Search(Expression<Func<TEntity, bool>> predicate);
+
+        //ICollection<TModel> GetAllWithInclude(Expression<Func<TEntity, object>> navigation);
     }
 }

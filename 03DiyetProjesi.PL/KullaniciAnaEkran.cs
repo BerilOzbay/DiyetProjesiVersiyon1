@@ -38,7 +38,7 @@ namespace _03DiyetProjesi.PL
 
         private void yiyecekİslemleriToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormAc(new YiyecekİslemleriEkrani());
+            FormAc(new YiyecekİslemleriEkrani(kullaniciId));
         }
 
         private void günSonuKaloriRaporuToolStripMenuItem_Click(object sender, EventArgs e)

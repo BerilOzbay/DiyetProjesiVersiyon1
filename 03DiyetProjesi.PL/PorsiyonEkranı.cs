@@ -18,6 +18,7 @@ namespace _03DiyetProjesi.PL
         public PorsiyonEkranı()
         {
             InitializeComponent();
+            Goster();
         }
         private void dgvPorsiyonEkrani_CellClick(object sender, DataGridViewCellEventArgs e)
         {

@@ -1,4 +1,4 @@
-﻿using _02DiyetProjesi.BL.Manager.Concrete;
+﻿ using _02DiyetProjesi.BL.Manager.Concrete;
 using _02DiyetProjesi.BL.Model;
 using System;
 using System.Collections.Generic;

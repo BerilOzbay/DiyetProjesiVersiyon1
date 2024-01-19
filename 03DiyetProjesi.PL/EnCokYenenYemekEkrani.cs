@@ -1,4 +1,5 @@
-﻿using _02DiyetProjesi.BL.Manager.Concrete;
+﻿using _01DiyetProjesi.DAL.Entities.Concrete;
+using _02DiyetProjesi.BL.Manager.Concrete;
 using _02DiyetProjesi.BL.Model;
 using Microsoft.Identity.Client;
 using System;
@@ -29,8 +30,16 @@ namespace _03DiyetProjesi.PL
         }
         private void Doldur()
         {
+            DiyetTablosuManager diyetTablosuManager = new DiyetTablosuManager();
             ogunler = OgunManager.GetAll().ToList();
             kullanicilar = KullaniciManager.GetAll().ToList();
+
+            List<DiyetTablosuViewModel> diyetTablolari = diyetTablosuManager.GetAll().ToList();
+            var enCokYenilenYemekler = diyetTablolari
+                .GroupBy(x => x.YiyecekId)
+                .OrderByDescending(group => group.Count()).Take(3).Select(group => group.Key);
+
+            lbxEnCok.DataSource = enCokYenilenYemekler.ToList();
         }
         public void Goster()
         {
@@ -60,8 +69,8 @@ namespace _03DiyetProjesi.PL
                     .Where(dt => dt.YiyecekId == selectedYiyecekId).ToList();
                 foreach(var d in yiyecekler)
                 {
-                    d.Kullanici = kullanicilar.Where(k => k.Id == d.KullaniciId).FirstOrDefault();
-                    d.Ogun = ogunler.Where(o => o.Id == d.OgunId).FirstOrDefault();
+                    //d.Kullanici = kullanicilar.Where(k => k.Id == d.KullaniciId).FirstOrDefault();
+                    //d.Ogun = ogunler.Where(o => o.Id == d.OgunId).FirstOrDefault();
                 }
                 yenilenYiyecekler = yiyecekler;
                 Goster();

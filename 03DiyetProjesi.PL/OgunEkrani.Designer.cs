@@ -39,36 +39,37 @@
             // 
             // txtOgunAdi
             // 
-            txtOgunAdi.Location = new Point(134, 54);
-            txtOgunAdi.Margin = new Padding(3, 2, 3, 2);
+            txtOgunAdi.Location = new Point(104, 72);
             txtOgunAdi.Name = "txtOgunAdi";
-            txtOgunAdi.Size = new Size(165, 27);
+            txtOgunAdi.Size = new Size(188, 27);
             txtOgunAdi.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(55, 72);
+            label1.Location = new Point(23, 75);
             label1.Name = "label1";
-            label1.Size = new Size(72, 20);
+            label1.Size = new Size(75, 20);
             label1.TabIndex = 1;
             label1.Text = "Öğün Adı:";
             // 
             // dgvOgunEkrani
             // 
             dgvOgunEkrani.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvOgunEkrani.Location = new Point(12, 141);
+            dgvOgunEkrani.Location = new Point(23, 121);
+            dgvOgunEkrani.Margin = new Padding(3, 4, 3, 4);
             dgvOgunEkrani.Name = "dgvOgunEkrani";
             dgvOgunEkrani.RowHeadersWidth = 51;
-            dgvOgunEkrani.Size = new Size(427, 210);
+            dgvOgunEkrani.Size = new Size(488, 280);
             dgvOgunEkrani.TabIndex = 2;
             dgvOgunEkrani.CellClick += dgvOgunEkrani_CellClick;
             // 
             // btnOgunEkle
             // 
-            btnOgunEkle.Location = new Point(12, 441);
+            btnOgunEkle.Location = new Point(26, 434);
+            btnOgunEkle.Margin = new Padding(3, 4, 3, 4);
             btnOgunEkle.Name = "btnOgunEkle";
-            btnOgunEkle.Size = new Size(114, 31);
+            btnOgunEkle.Size = new Size(130, 41);
             btnOgunEkle.TabIndex = 3;
             btnOgunEkle.Text = "EKLE";
             btnOgunEkle.UseVisualStyleBackColor = true;
@@ -76,9 +77,10 @@
             // 
             // btnOgunSil
             // 
-            btnOgunSil.Location = new Point(164, 441);
+            btnOgunSil.Location = new Point(199, 434);
+            btnOgunSil.Margin = new Padding(3, 4, 3, 4);
             btnOgunSil.Name = "btnOgunSil";
-            btnOgunSil.Size = new Size(114, 31);
+            btnOgunSil.Size = new Size(130, 41);
             btnOgunSil.TabIndex = 4;
             btnOgunSil.Text = "SİL";
             btnOgunSil.UseVisualStyleBackColor = true;
@@ -86,9 +88,10 @@
             // 
             // btnOgunGuncelle
             // 
-            btnOgunGuncelle.Location = new Point(323, 441);
+            btnOgunGuncelle.Location = new Point(381, 434);
+            btnOgunGuncelle.Margin = new Padding(3, 4, 3, 4);
             btnOgunGuncelle.Name = "btnOgunGuncelle";
-            btnOgunGuncelle.Size = new Size(114, 31);
+            btnOgunGuncelle.Size = new Size(130, 41);
             btnOgunGuncelle.TabIndex = 5;
             btnOgunGuncelle.Text = "GÜNCELLE";
             btnOgunGuncelle.UseVisualStyleBackColor = true;
@@ -96,16 +99,15 @@
             // 
             // OgunEkrani
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(635, 405);
+            ClientSize = new Size(1022, 660);
             Controls.Add(btnOgunGuncelle);
             Controls.Add(btnOgunSil);
             Controls.Add(btnOgunEkle);
             Controls.Add(dgvOgunEkrani);
             Controls.Add(label1);
             Controls.Add(txtOgunAdi);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "OgunEkrani";
             Text = "ÖğünEkranı";
             ((System.ComponentModel.ISupportInitialize)dgvOgunEkrani).EndInit();

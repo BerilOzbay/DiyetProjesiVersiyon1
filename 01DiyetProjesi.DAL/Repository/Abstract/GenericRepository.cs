@@ -34,6 +34,7 @@ namespace _01DiyetProjesi.DAL.Repository.Abstract
             entity.DataStatus = entity.DataStatus != Enums.DataStatus.Deleted 
                             ? Enums.DataStatus.Updated : Enums.DataStatus.Deleted;
             entity.Modifided = DateTime.Now;
+             
             _dbSet.Update(entity);
             _dbContext.SaveChanges();
         }
@@ -54,6 +55,14 @@ namespace _01DiyetProjesi.DAL.Repository.Abstract
         {
            return _dbSet.AsNoTracking().ToList();
         }
+
+        //public ICollection<T> GetAllWithInclude(params Expression<Func<T, object>>[] navigation)
+        //{
+        //    ICollection<T> query = _dbContext.Set<T>();
+        //    foreach (var navigationProperty in navigation) { query = query.Include(navigationProperty); }
+        //    return query;
+        //    return _dbSet.Include(navigation).AsNoTracking().ToList();
+        //}
 
         public T GetById(int id)
         {

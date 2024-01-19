@@ -76,6 +76,22 @@ namespace _02DiyetProjesi.BL.Manager.Abstract
             return models;
         }
 
+        //public ICollection<TModel> GetAllWithInclude(params Expression<Func<TEntity, object>>[] navigation)
+        //{
+        //    IQueryable<TEntity> entities = _repo.GetAllWithInclude(navigation);
+        //    entities = entities.Where(e => e.Deleted == null);
+
+        //    ICollection<TModel> models = new List<TModel>();
+
+        //    foreach (TEntity entity in entities)
+        //    {
+        //        TModel model = _mapper.Map<TModel>(entity);
+        //        models.Add(model);
+        //    }
+
+        //    return models;
+        //}
+
         public TModel GetById(int id)
         {
             TEntity entity = _repo.GetById(id);
