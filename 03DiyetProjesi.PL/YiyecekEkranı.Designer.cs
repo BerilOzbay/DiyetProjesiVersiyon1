@@ -77,6 +77,7 @@
             dgvYiyecekEkrani.Location = new Point(146, 189);
             dgvYiyecekEkrani.Name = "dgvYiyecekEkrani";
             dgvYiyecekEkrani.RowHeadersWidth = 51;
+            dgvYiyecekEkrani.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvYiyecekEkrani.Size = new Size(533, 283);
             dgvYiyecekEkrani.TabIndex = 8;
             dgvYiyecekEkrani.CellClick += dgvYiyecekEkrani_CellClick;
