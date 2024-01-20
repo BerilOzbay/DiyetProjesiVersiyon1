@@ -29,6 +29,7 @@ namespace _03DiyetProjesi.PL
         {
             dgvPorsiyonEkrani.DataSource = null;
             dgvPorsiyonEkrani.DataSource = PorsiyonlariGetir();
+            dgvPorsiyonEkrani.Columns[0].Visible = false;
         }
 
         private List<PorsiyonViewModel> PorsiyonlariGetir()

@@ -1,5 +1,6 @@
 ﻿using _01DiyetProjesi.DAL.Context.EF;
 using _01DiyetProjesi.DAL.Entities.Abstract;
+using _01DiyetProjesi.DAL.Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -31,12 +32,27 @@ namespace _01DiyetProjesi.DAL.Repository.Abstract
         }
         public void Update(T entity)
         {
-            entity.DataStatus = entity.DataStatus != Enums.DataStatus.Deleted 
-                            ? Enums.DataStatus.Updated : Enums.DataStatus.Deleted;
-            entity.Modifided = DateTime.Now;
-             
-            _dbSet.Update(entity);
+            if (typeof(T) == typeof(DiyetTablosu))
+            {
+                _dbContext.Entry(entity).State = EntityState.Modified;
+               
+            }
+            else
+            {
+                _dbSet.Update(entity);
+                
+            }
             _dbContext.SaveChanges();
+
+
+            //entity.DataStatus = entity.DataStatus != Enums.DataStatus.Deleted 
+            //                ? Enums.DataStatus.Updated : Enums.DataStatus.Deleted;
+            //entity.Modifided = DateTime.Now;
+
+            //_dbSet.Update(entity);
+            //_dbContext.SaveChanges();
+
+
         }
         public void Remove(T entity)
         {

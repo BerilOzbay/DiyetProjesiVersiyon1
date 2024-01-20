@@ -62,7 +62,7 @@ namespace _03DiyetProjesi.PL
             DiyetTablosuViewModel diyetTablosuViewModel = new DiyetTablosuViewModel();
 
             List<DiyetTablosuViewModel> kisi1 = diyetTablosuManager.GetAll()
-                    .Where(dt => dt.YenilenGun == selectedDate && dt.KullaniciId == ((DiyetTablosuViewModel)cmbxKisi1.SelectedItem).KullaniciId)
+                    .Where(dt => dt.YenilenGun.Date == selectedDate.Date && dt.KullaniciId == ((DiyetTablosuViewModel)cmbxKisi1.SelectedItem).KullaniciId)
                     .ToList();
             return kisi1;
         }
@@ -72,7 +72,7 @@ namespace _03DiyetProjesi.PL
             DiyetTablosuViewModel diyetTablosuViewModel = new DiyetTablosuViewModel();
 
             List<DiyetTablosuViewModel> kisi2 = diyetTablosuManager.GetAll()
-                    .Where(dt => dt.YenilenGun == selectedDate && dt.KullaniciId == ((DiyetTablosuViewModel)cmbxKisi2.SelectedItem).KullaniciId)
+                    .Where(dt => dt.YenilenGun.Date == selectedDate.Date && dt.KullaniciId == ((DiyetTablosuViewModel)cmbxKisi2.SelectedItem).KullaniciId)
                     .ToList();
             return kisi2;
         }

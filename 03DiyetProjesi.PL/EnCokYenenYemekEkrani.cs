@@ -34,9 +34,11 @@ namespace _03DiyetProjesi.PL
             ogunler = OgunManager.GetAll().ToList();
             kullanicilar = KullaniciManager.GetAll().ToList();
 
-            List<DiyetTablosuViewModel> diyetTablolari = diyetTablosuManager.GetAll().ToList();
+            List<DiyetTablosuViewModel> diyetTablolari = diyetTablosuManager
+                .GetAll()
+                .ToList();
             var enCokYenilenYemekler = diyetTablolari
-                .GroupBy(x => x.YiyecekId)
+                .GroupBy(x => x.Yiyecek.Ad)
                 .OrderByDescending(group => group.Count()).Take(3).Select(group => group.Key);
 
             lbxEnCok.DataSource = enCokYenilenYemekler.ToList();

@@ -26,6 +26,7 @@ namespace _03DiyetProjesi.PL
         {
             dgvOgunEkrani.DataSource = null;
             dgvOgunEkrani.DataSource = OgunleriGetir();
+            dgvOgunEkrani.Columns[0].Visible = false;
             dgvOgunEkrani.Columns[2].Visible = false;
         }
         private List<OgunViewModel> OgunleriGetir()

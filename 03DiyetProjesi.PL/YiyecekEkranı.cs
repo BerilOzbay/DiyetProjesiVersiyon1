@@ -37,6 +37,7 @@ namespace _03DiyetProjesi.PL
         {
             dgvYiyecekEkrani.DataSource = null;
             dgvYiyecekEkrani.DataSource = YiyecekleriGetir();
+            dgvYiyecekEkrani.Columns[0].Visible = false;
         }
 
         private List<YiyecekViewModel> YiyecekleriGetir()

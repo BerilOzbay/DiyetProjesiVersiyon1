@@ -10,6 +10,12 @@ namespace _01DiyetProjesi.DAL.Context.EF
 {
     public class EfDbContext : DbContext
     {
+        public EfDbContext()
+        {
+           // ChangeTracker.AutoDetectChangesEnabled = false;
+            //ChangeTracker.LazyLoadingEnabled = false;
+        }
+
         public DbSet<Kullanici> Kullanicilar { get; set; }
         public DbSet<Ogun> Ogunler { get; set; }
         public DbSet<Porsiyon> Porsiyonlar { get; set; }
@@ -17,7 +23,8 @@ namespace _01DiyetProjesi.DAL.Context.EF
         public DbSet<DiyetTablosu> DiyetTablolari { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=HALITERMET;Trusted_Connection=true;database=diyetdb;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-LAQPBG1\\MSSQLSERVER02;Database=DiyetProjesi;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+            optionsBuilder.UseLazyLoadingProxies();
 
             base.OnConfiguring(optionsBuilder);
         }
