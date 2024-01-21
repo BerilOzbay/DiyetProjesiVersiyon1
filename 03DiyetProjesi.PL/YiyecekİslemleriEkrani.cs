@@ -57,13 +57,13 @@ namespace _03DiyetProjesi.PL
                 .ToList();
             //WithInclude<DiyetTablosuViewModel>(p=> p.Kullanici, p=>p.Yiyecek, p=>p.Ogun, p=>p.Porsiyon)
             //.ToList();
-            foreach (var d in diyetTablosu)
-            {
+            //foreach (var d in diyetTablosu)
+            //{
                 //d.Yiyecek = YiyecekManager.g;
                 //d.Kullanici = kullanicilar.Where(k => k.Id == d.KullaniciId).FirstOrDefault();
                 //d.Porsiyon = porsiyonlar.Where(p => p.Id == d.PorsiyonId).FirstOrDefault();
                 //d.Ogun = ogunler.Where(o => o.Id == d.OgunId).FirstOrDefault();
-            }
+            //}
             dgvYiyecekİslemleri.DataSource = null;
             dgvYiyecekİslemleri.DataSource = diyetTablosu;
             dgvYiyecekİslemleri.Columns[0].Visible = false;
@@ -76,10 +76,15 @@ namespace _03DiyetProjesi.PL
         private void cbxYiyecekSec_SelectedIndexChanged(object sender, EventArgs e)
         {
             YiyecekViewModel secilenYiyecek = (YiyecekViewModel)cbxYiyecekSec.SelectedItem;
-            using (var ms = new MemoryStream(secilenYiyecek.Resim))
+            if(secilenYiyecek !=null )
             {
-                pictureBox1.Image = Image.FromStream(ms);
+                using (var ms = new MemoryStream(secilenYiyecek.Resim))
+                {
+                    pictureBox1.Image = Image.FromStream(ms);
+                }
             }
+            else { pictureBox1.Image = null; }
+            
         }
         private void btnEkle_Click(object sender, EventArgs e)
         {
@@ -101,9 +106,11 @@ namespace _03DiyetProjesi.PL
             
             secilen = (DiyetTablosuViewModel)dgvYiyecekİslemleri.SelectedRows[0].DataBoundItem;
 
-            cbxOgunSec.SelectedItem = secilen;
-            cbxPorsiyonSec.SelectedItem = secilen;
-            cbxYiyecekSec.SelectedItem = secilen;
+            //cbxOgunSec.SelectedItem = secilenOgun;
+
+            cbxOgunSec.SelectedIndex = ogunler.FindIndex(x => x.Id == secilen.Ogun.Id);
+            cbxYiyecekSec.SelectedIndex = yiyecekler.FindIndex(x => x.Id == secilen.Yiyecek.Id);
+            cbxPorsiyonSec.SelectedIndex = porsiyonlar.FindIndex(x => x.Id == secilen.Porsiyon.Id);
             nUd.Value = secilen.Birim;
 
             YiyecekViewModel secilenYiyecek = (YiyecekViewModel)cbxYiyecekSec.SelectedItem;

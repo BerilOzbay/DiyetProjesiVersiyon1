@@ -76,6 +76,9 @@ namespace _03DiyetProjesi.PL
                     }
                     yiyecekManager.Add(yiyecekViewModel);
                     Goster();
+                    MemoryStream ms = new MemoryStream(yiyecekViewModel.Resim);
+                    pbYiyecekResmi.SizeMode = PictureBoxSizeMode.Zoom;
+                    pbYiyecekResmi.Image = Image.FromStream(ms);
                     MessageBox.Show("Yiyecek eklendi");
                 }
                 else
