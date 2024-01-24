@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KullaniciAnaEkran));
             menuStrip1 = new MenuStrip();
             yiyecekİslemleriToolStripMenuItem = new ToolStripMenuItem();
             günSonuKaloriRaporuToolStripMenuItem = new ToolStripMenuItem();
@@ -40,32 +41,36 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { yiyecekİslemleriToolStripMenuItem, günSonuKaloriRaporuToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(508, 24);
+            menuStrip1.Padding = new Padding(7, 3, 0, 3);
+            menuStrip1.Size = new Size(931, 30);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // yiyecekİslemleriToolStripMenuItem
             // 
             yiyecekİslemleriToolStripMenuItem.Name = "yiyecekİslemleriToolStripMenuItem";
-            yiyecekİslemleriToolStripMenuItem.Size = new Size(106, 20);
+            yiyecekİslemleriToolStripMenuItem.Size = new Size(132, 24);
             yiyecekİslemleriToolStripMenuItem.Text = "Yiyecek İslemleri";
             yiyecekİslemleriToolStripMenuItem.Click += yiyecekİslemleriToolStripMenuItem_Click;
             // 
             // günSonuKaloriRaporuToolStripMenuItem
             // 
             günSonuKaloriRaporuToolStripMenuItem.Name = "günSonuKaloriRaporuToolStripMenuItem";
-            günSonuKaloriRaporuToolStripMenuItem.Size = new Size(145, 20);
+            günSonuKaloriRaporuToolStripMenuItem.Size = new Size(181, 24);
             günSonuKaloriRaporuToolStripMenuItem.Text = "Gün Sonu Kalori Raporu";
             günSonuKaloriRaporuToolStripMenuItem.Click += günSonuKaloriRaporuToolStripMenuItem_Click;
             // 
             // KullaniciAnaEkran
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(508, 372);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(931, 547);
             Controls.Add(menuStrip1);
             IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "KullaniciAnaEkran";
             Text = "KullaniciAnaEkran";
             menuStrip1.ResumeLayout(false);

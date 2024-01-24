@@ -28,18 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EnCokYenenYemekEkrani));
             cmbxyiyecek = new ComboBox();
             lblKisi1 = new Label();
             dgvEnCokYenenYemek = new DataGridView();
             label1 = new Label();
             lbxEnCok = new ListBox();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvEnCokYenenYemek).BeginInit();
             SuspendLayout();
             // 
             // cmbxyiyecek
             // 
             cmbxyiyecek.FormattingEnabled = true;
-            cmbxyiyecek.Location = new Point(169, 56);
+            cmbxyiyecek.Location = new Point(207, 112);
             cmbxyiyecek.Name = "cmbxyiyecek";
             cmbxyiyecek.Size = new Size(241, 28);
             cmbxyiyecek.TabIndex = 11;
@@ -48,16 +51,27 @@
             // lblKisi1
             // 
             lblKisi1.AutoSize = true;
-            lblKisi1.Location = new Point(40, 59);
+            lblKisi1.BackColor = Color.Transparent;
+            lblKisi1.Location = new Point(78, 115);
             lblKisi1.Name = "lblKisi1";
-            lblKisi1.Size = new Size(113, 20);
+            lblKisi1.Size = new Size(61, 20);
             lblKisi1.TabIndex = 10;
-            lblKisi1.Text = "Yiyecek seçiniz :";
+            lblKisi1.Text = "Yiyecek:";
             // 
             // dgvEnCokYenenYemek
             // 
+            dgvEnCokYenenYemek.BackgroundColor = SystemColors.Info;
             dgvEnCokYenenYemek.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvEnCokYenenYemek.Location = new Point(40, 90);
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.Transparent;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dgvEnCokYenenYemek.DefaultCellStyle = dataGridViewCellStyle1;
+            dgvEnCokYenenYemek.EnableHeadersVisualStyles = false;
+            dgvEnCokYenenYemek.Location = new Point(78, 146);
             dgvEnCokYenenYemek.Name = "dgvEnCokYenenYemek";
             dgvEnCokYenenYemek.RowHeadersWidth = 51;
             dgvEnCokYenenYemek.Size = new Size(516, 410);
@@ -66,7 +80,8 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(613, 64);
+            label1.BackColor = Color.Transparent;
+            label1.Location = new Point(651, 120);
             label1.Name = "label1";
             label1.Size = new Size(161, 20);
             label1.TabIndex = 13;
@@ -74,17 +89,31 @@
             // 
             // lbxEnCok
             // 
+            lbxEnCok.BackColor = SystemColors.Info;
             lbxEnCok.FormattingEnabled = true;
-            lbxEnCok.Location = new Point(613, 90);
+            lbxEnCok.Location = new Point(651, 146);
             lbxEnCok.Name = "lbxEnCok";
             lbxEnCok.Size = new Size(292, 404);
             lbxEnCok.TabIndex = 14;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Location = new Point(78, 72);
+            label2.Name = "label2";
+            label2.Size = new Size(309, 20);
+            label2.TabIndex = 15;
+            label2.Text = "Lütfen bilgi almak istediğiniz yiyeceği seçiniz.";
             // 
             // EnCokYenenYemekEkrani
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(932, 634);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1079, 666);
+            Controls.Add(label2);
             Controls.Add(lbxEnCok);
             Controls.Add(label1);
             Controls.Add(dgvEnCokYenenYemek);
@@ -104,5 +133,6 @@
         private DataGridView dgvEnCokYenenYemek;
         private Label label1;
         private ListBox lbxEnCok;
+        private Label label2;
     }
 }

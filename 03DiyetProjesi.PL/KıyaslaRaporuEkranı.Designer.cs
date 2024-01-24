@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KıyaslaRaporuEkranı));
             dgvKiyaslamaEkrani = new DataGridView();
             lblKisi1 = new Label();
             lblkisi2 = new Label();
@@ -35,14 +38,25 @@
             cmbxKisi2 = new ComboBox();
             dgvKıyaslamaEkrani2 = new DataGridView();
             dtpKıyas = new DateTimePicker();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvKiyaslamaEkrani).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvKıyaslamaEkrani2).BeginInit();
             SuspendLayout();
             // 
             // dgvKiyaslamaEkrani
             // 
+            dgvKiyaslamaEkrani.BackgroundColor = SystemColors.Info;
             dgvKiyaslamaEkrani.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvKiyaslamaEkrani.Location = new Point(26, 90);
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.Transparent;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dgvKiyaslamaEkrani.DefaultCellStyle = dataGridViewCellStyle1;
+            dgvKiyaslamaEkrani.EnableHeadersVisualStyles = false;
+            dgvKiyaslamaEkrani.Location = new Point(66, 172);
             dgvKiyaslamaEkrani.Name = "dgvKiyaslamaEkrani";
             dgvKiyaslamaEkrani.RowHeadersWidth = 51;
             dgvKiyaslamaEkrani.Size = new Size(438, 398);
@@ -51,7 +65,8 @@
             // lblKisi1
             // 
             lblKisi1.AutoSize = true;
-            lblKisi1.Location = new Point(26, 53);
+            lblKisi1.BackColor = Color.Transparent;
+            lblKisi1.Location = new Point(66, 135);
             lblKisi1.Name = "lblKisi1";
             lblKisi1.Size = new Size(47, 20);
             lblKisi1.TabIndex = 4;
@@ -60,7 +75,7 @@
             // lblkisi2
             // 
             lblkisi2.AutoSize = true;
-            lblkisi2.Location = new Point(540, 56);
+            lblkisi2.Location = new Point(580, 138);
             lblkisi2.Name = "lblkisi2";
             lblkisi2.Size = new Size(47, 20);
             lblkisi2.TabIndex = 7;
@@ -68,24 +83,36 @@
             // 
             // cmbxKisi1
             // 
+            cmbxKisi1.BackColor = SystemColors.Info;
             cmbxKisi1.FormattingEnabled = true;
-            cmbxKisi1.Location = new Point(88, 50);
+            cmbxKisi1.Location = new Point(128, 132);
             cmbxKisi1.Name = "cmbxKisi1";
             cmbxKisi1.Size = new Size(209, 28);
             cmbxKisi1.TabIndex = 9;
             // 
             // cmbxKisi2
             // 
+            cmbxKisi2.BackColor = SystemColors.Info;
             cmbxKisi2.FormattingEnabled = true;
-            cmbxKisi2.Location = new Point(593, 53);
+            cmbxKisi2.Location = new Point(633, 135);
             cmbxKisi2.Name = "cmbxKisi2";
             cmbxKisi2.Size = new Size(243, 28);
             cmbxKisi2.TabIndex = 10;
             // 
             // dgvKıyaslamaEkrani2
             // 
+            dgvKıyaslamaEkrani2.BackgroundColor = SystemColors.Info;
             dgvKıyaslamaEkrani2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvKıyaslamaEkrani2.Location = new Point(538, 89);
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.Transparent;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvKıyaslamaEkrani2.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvKıyaslamaEkrani2.EnableHeadersVisualStyles = false;
+            dgvKıyaslamaEkrani2.Location = new Point(578, 171);
             dgvKıyaslamaEkrani2.Name = "dgvKıyaslamaEkrani2";
             dgvKıyaslamaEkrani2.RowHeadersWidth = 51;
             dgvKıyaslamaEkrani2.Size = new Size(452, 398);
@@ -93,17 +120,31 @@
             // 
             // dtpKıyas
             // 
-            dtpKıyas.Location = new Point(1016, 53);
+            dtpKıyas.CalendarMonthBackground = SystemColors.Info;
+            dtpKıyas.Location = new Point(1056, 135);
             dtpKıyas.Name = "dtpKıyas";
             dtpKıyas.Size = new Size(242, 27);
             dtpKıyas.TabIndex = 12;
             dtpKıyas.ValueChanged += dtpKıyas_ValueChanged;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Location = new Point(66, 93);
+            label1.Name = "label1";
+            label1.Size = new Size(350, 20);
+            label1.TabIndex = 13;
+            label1.Text = "Lütfen bilgilerini görmek istediğiniz iki kişiyi seçiniz.";
+            // 
             // KıyaslaRaporuEkranı
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1270, 578);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1358, 659);
+            Controls.Add(label1);
             Controls.Add(dtpKıyas);
             Controls.Add(dgvKıyaslamaEkrani2);
             Controls.Add(cmbxKisi2);
@@ -129,5 +170,6 @@
         private ComboBox cmbxKisi2;
         private DataGridView dgvKıyaslamaEkrani2;
         private DateTimePicker dtpKıyas;
+        private Label label1;
     }
 }

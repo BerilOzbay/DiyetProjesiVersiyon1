@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminEkran));
             menuStrip1 = new MenuStrip();
             öğünEkranıToolStripMenuItem = new ToolStripMenuItem();
             yiyecekEkranıToolStripMenuItem = new ToolStripMenuItem();
@@ -95,6 +96,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1213, 527);
             Controls.Add(menuStrip1);
             IsMdiContainer = true;
